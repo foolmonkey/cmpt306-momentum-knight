@@ -6,9 +6,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
 {
 
     //Variables required to calculate momentum
-    public float movementSpeed = 1f;
-    public float momentum = 1f;
-    public float mass = 1f;
+    public float maxSpeed = 5.0f;
+    public float currSpeed = 1.0f;
 
     //Renderer that will assosicate direction with proper sprite and animation
     IsometricCharacterRenderer isoRenderer;
@@ -48,69 +47,102 @@ public class IsometricPlayerMovementController : MonoBehaviour
         //up and to the right
         if (inputVector == new Vector2(1,1))
         {
-            rbody.AddForce(transform.up * 2);
-            rbody.AddForce(transform.right * 2);
+            rbody.AddForce(transform.up * currSpeed);
+            rbody.AddForce(transform.right * currSpeed);
 
             isoRenderer.SetDirection(movement);
+            if (currSpeed < maxSpeed)
+            {
+                currSpeed += 0.05f;
+            }
         }
 
         //move down and to the left
         if (inputVector == new Vector2(-1, -1))
         {
-            rbody.AddForce(transform.up * -2);
-            rbody.AddForce(transform.right * -2);
+            rbody.AddForce(transform.up * -currSpeed);
+            rbody.AddForce(transform.right * -currSpeed);
 
             isoRenderer.SetDirection(movement);
+            if (currSpeed < maxSpeed)
+            {
+                currSpeed += 0.05f;
+            }
         }
 
         //move down and to the right
         if (inputVector == new Vector2(1, -1))
         {
-            rbody.AddForce(transform.up * -2);
-            rbody.AddForce(transform.right * 2);
+            rbody.AddForce(transform.up * -currSpeed);
+            rbody.AddForce(transform.right * currSpeed);
 
             isoRenderer.SetDirection(movement);
+            if (currSpeed < maxSpeed)
+            {
+                currSpeed += 0.05f;
+            }
         }
 
         //move up and to the left
         if (inputVector == new Vector2(-1, 1))
         {
-            rbody.AddForce(transform.up * 2);
-            rbody.AddForce(transform.right * -2);
+            rbody.AddForce(transform.up * currSpeed);
+            rbody.AddForce(transform.right * -currSpeed);
 
             isoRenderer.SetDirection(movement);
+            if (currSpeed < maxSpeed)
+            {
+                currSpeed += 0.05f;
+            }
         }
 
         //move to the left
         if (inputVector == new Vector2(-1, 0))
         {
-            rbody.AddForce(transform.right * -2);
+            rbody.AddForce(transform.right * -currSpeed);
 
             isoRenderer.SetDirection(movement);
+            if (currSpeed < maxSpeed)
+            {
+                currSpeed += 0.05f;
+            }
         }
 
         //move up
         if (inputVector == new Vector2(0, 1))
         {
-            rbody.AddForce(transform.up * 2);
+            rbody.AddForce(transform.up * currSpeed);
 
             isoRenderer.SetDirection(movement);
+            if (currSpeed < maxSpeed)
+            {
+                currSpeed += 0.05f;
+            }
         }
 
         //move right
         if (inputVector == new Vector2(1, 0))
         {
-            rbody.AddForce(transform.right * 2);
+            rbody.AddForce(transform.right * currSpeed);
 
             isoRenderer.SetDirection(movement);
+            if (currSpeed < maxSpeed)
+            {
+                currSpeed += 0.05f;
+            }
         }
 
         //move down
         if (inputVector == new Vector2(0, -1))
         {
-            rbody.AddForce(transform.up * -2);
+            rbody.AddForce(transform.up * -currSpeed);
 
             isoRenderer.SetDirection(movement);
+            if (currSpeed < maxSpeed)
+            {
+                currSpeed += 0.05f;
+            }
+           
         }
 
         //move down
@@ -118,6 +150,10 @@ public class IsometricPlayerMovementController : MonoBehaviour
         {
 
             isoRenderer.SetDirection(movement);
+            if (currSpeed > 0)
+            {
+                currSpeed -= 0.25f;
+            }
         }
 
 
@@ -128,6 +164,5 @@ public class IsometricPlayerMovementController : MonoBehaviour
         rbody.MovePosition(newPos);
         */
 
-        Debug.Log(movementSpeed);
     }
 }
