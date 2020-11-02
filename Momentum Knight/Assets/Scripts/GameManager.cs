@@ -1,18 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //Things like starting, ending, and restarting the game will go in the game manager. It is responsible for changing game states
 
-    // Update is called once per frame
-    void Update()
+    //Creates static globally accessable variable 
+    public static GameManager gameManager;
+
+
+    void Awake()
     {
-        
+        //Check to see if gameManager exists. If it does not then create one
+        if (!gameManager)
+            gameManager = this;
+        else
+            Destroy(this);
     }
 }
