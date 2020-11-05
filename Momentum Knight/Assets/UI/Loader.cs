@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public static class Loader
 {
     public enum Scene{
-        MainMenu, Loading, TestPortal, Testv2
+        MainMenu, Loading, TestPortal, Frost, Ruins
     }
 
     private static Action onLoaderCallback;

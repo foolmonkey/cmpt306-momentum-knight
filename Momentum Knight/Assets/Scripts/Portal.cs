@@ -18,7 +18,7 @@ public class Portal : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             // call loader script
-            Loader.Load(Loader.Scene.Testv2);
+            Loader.Load(Loader.Scene.TestPortal);
         }
     }
 }
