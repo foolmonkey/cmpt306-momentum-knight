@@ -58039,6 +58039,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followTarget: {fileID: 1678226915}
   moveSpeed: 2
+--- !u!1 &1344654321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7959319313469966442, guid: a53d5699ff019744ba4221a6f3f033c1, type: 3}
+  m_PrefabInstance: {fileID: 1678226914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &1344654326
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344654321}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.2}
+  serializedVersion: 2
+  m_Radius: 0.13
 --- !u!1 &1355190113
 GameObject:
   m_ObjectHideFlags: 0
@@ -58739,7 +58760,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.58
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 389032994500528877, guid: a53d5699ff019744ba4221a6f3f033c1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a53d5699ff019744ba4221a6f3f033c1, type: 3}
 --- !u!4 &1678226915 stripped
 Transform:

@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TestPortal.unity
     guid: 2a4dc6f4f7a9d944484bf9b79d8082d1
   - enabled: 1
-    path: Assets/Scenes/Testv2.unity
-    guid: ae0a7cc5d7374bf4d9a7176583f6d465
+    path: Assets/Scenes/Frost.unity
+    guid: 1b83346ddae5e9d4abf0ee4ccb0fb854
+  - enabled: 1
+    path: Assets/Scenes/Ruins.unity
+    guid: f7c84a32f8df65049ba1193b32929199
   m_configObjects: {}
