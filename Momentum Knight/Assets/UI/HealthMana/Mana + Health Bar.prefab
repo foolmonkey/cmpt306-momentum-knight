@@ -335,7 +335,6 @@ GameObject:
   - component: {fileID: 4807201937251137823}
   - component: {fileID: 8136066201419572531}
   - component: {fileID: 6476112056494087917}
-  - component: {fileID: 8657195298230167688}
   m_Layer: 5
   m_Name: Mana + Health Bar
   m_TagString: Untagged
@@ -391,20 +390,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 4807201936440785750}
---- !u!114 &8657195298230167688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4807201937251137820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51be62c1f09d1c44bae21216f8c1bf0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToFollow: {fileID: 0}
-  offset: {x: 0, y: 1, z: 0}
 --- !u!1 &4807201937283951515
 GameObject:
   m_ObjectHideFlags: 0

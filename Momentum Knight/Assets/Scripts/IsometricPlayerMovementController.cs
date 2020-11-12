@@ -34,7 +34,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         float currSpeedDir = currSpeed * 0.5f;
         Vector3 prevVelocity = rbody.velocity;
-
+        float accelerationAdjusted = acceleration;
         Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
         /*
         //When the user gains momentum (moves diagonally) we want to increase their speed and keep it there
@@ -49,6 +49,10 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
         Vector2 movement = inputVector;
 
+        if(currSpeed > 2)
+        {
+            accelerationAdjusted = acceleration / 5f;
+        }
 
         if (inputVector == new Vector2(0, 0))
         {
@@ -60,7 +64,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             isoRenderer.SetDirection(movement);
             if (currSpeed > 1)
             {
-                currSpeed -= acceleration;
+                currSpeed -= acceleration * 2f;
             }
         }
 
@@ -81,7 +85,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             isoRenderer.SetDirection(movement);
             if (currSpeed < maxSpeed)
             {
-                currSpeed += acceleration;
+                currSpeed += accelerationAdjusted;
             }
         }
 
@@ -102,7 +106,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             isoRenderer.SetDirection(movement);
             if (currSpeed < maxSpeed)
             {
-                currSpeed += acceleration;
+                currSpeed += accelerationAdjusted;
             }
         }
 
@@ -120,7 +124,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             isoRenderer.SetDirection(movement);
             if (currSpeed < maxSpeed)
             {
-                currSpeed += acceleration;
+                currSpeed += accelerationAdjusted;
             }
         }
 
@@ -141,7 +145,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             isoRenderer.SetDirection(movement);
             if (currSpeed < maxSpeed)
             {
-                currSpeed += acceleration;
+                currSpeed += accelerationAdjusted;
             }
         }
 
@@ -161,7 +165,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             isoRenderer.SetDirection(movement);
             if (currSpeed < maxSpeed)
             {
-                currSpeed += acceleration;
+                currSpeed += accelerationAdjusted;
             }
         }
 
@@ -181,7 +185,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             isoRenderer.SetDirection(movement);
             if (currSpeed < maxSpeed)
             {
-                currSpeed += acceleration;
+                currSpeed += accelerationAdjusted;
             }
         }
 
@@ -202,7 +206,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
             if (currSpeed < maxSpeed)
             {
-                currSpeed += acceleration;
+                currSpeed += accelerationAdjusted;
             }
         }
 
@@ -222,7 +226,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             isoRenderer.SetDirection(movement);
             if (currSpeed < maxSpeed)
             {
-                currSpeed += acceleration;
+                currSpeed += accelerationAdjusted;
             }  
         }
 
