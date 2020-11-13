@@ -61,7 +61,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
                 rbody.velocity = new Vector3(0, 0, 0);
             }
 
-            isoRenderer.SetDirection(movement);
             if (currSpeed > 1)
             {
                 currSpeed -= acceleration * 2f;
@@ -78,11 +77,11 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
             if (prevVelocity.magnitude < maxSpeed)
             {
+                Debug.Log("hi");
                 rbody.AddForce(transform.up * currSpeedDir);
                 rbody.AddForce(transform.right * currSpeed);
             }
 
-            isoRenderer.SetDirection(movement);
             if (currSpeed < maxSpeed)
             {
                 currSpeed += accelerationAdjusted;
@@ -103,7 +102,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
                 rbody.AddForce(transform.right * -currSpeed);
             }
 
-            isoRenderer.SetDirection(movement);
             if (currSpeed < maxSpeed)
             {
                 currSpeed += accelerationAdjusted;
@@ -121,7 +119,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
             rbody.AddForce(transform.up * -currSpeedDir);
             rbody.AddForce(transform.right * currSpeed);
 
-            isoRenderer.SetDirection(movement);
             if (currSpeed < maxSpeed)
             {
                 currSpeed += accelerationAdjusted;
@@ -142,7 +139,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
                 rbody.AddForce(transform.right * -currSpeed);
             }
 
-            isoRenderer.SetDirection(movement);
             if (currSpeed < maxSpeed)
             {
                 currSpeed += accelerationAdjusted;
@@ -162,7 +158,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
                 rbody.AddForce(transform.right * -currSpeed);
             }
 
-            isoRenderer.SetDirection(movement);
             if (currSpeed < maxSpeed)
             {
                 currSpeed += accelerationAdjusted;
@@ -182,7 +177,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
                 rbody.AddForce(transform.up * currSpeed);
             }
 
-            isoRenderer.SetDirection(movement);
             if (currSpeed < maxSpeed)
             {
                 currSpeed += accelerationAdjusted;
@@ -202,7 +196,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
                 rbody.AddForce(transform.right * currSpeed);
             }
 
-            isoRenderer.SetDirection(movement);
 
             if (currSpeed < maxSpeed)
             {
@@ -223,12 +216,12 @@ public class IsometricPlayerMovementController : MonoBehaviour
                 rbody.AddForce(transform.up * -currSpeed);
             }
 
-            isoRenderer.SetDirection(movement);
             if (currSpeed < maxSpeed)
             {
                 currSpeed += accelerationAdjusted;
             }  
         }
+        isoRenderer.SetDirection(movement);
 
         //Movement animation
         /*
