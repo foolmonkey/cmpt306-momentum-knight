@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 223931945}
   - component: {fileID: 223931944}
   - component: {fileID: 223931943}
+  - component: {fileID: 223931948}
   m_Layer: 0
   m_Name: Wizard
   m_TagString: Enemy
@@ -152,8 +153,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223931941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.98, y: -9.12, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: 19.709, y: -9.391, z: 0}
+  m_LocalScale: {x: 5.9145584, y: 5.9145584, z: 5.9145584}
   m_Children: []
   m_Father: {fileID: 585228188}
   m_RootOrder: 0
@@ -171,9 +172,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000059604645, y: 0}
+  m_Offset: {x: -0.000000059604645, y: -0.09468206}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.07118416
 --- !u!114 &223931944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,14 +207,14 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 4
+  maxSpeed: 3
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
   centerOffsetCompatibility: NaN
   orientation: 1
-  enableRotation: 1
+  enableRotation: 0
   targetCompatibility: {fileID: 0}
   maxAcceleration: 7
   rotationSpeed: 60
@@ -292,8 +293,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -3714021614257918954, guid: e4f95c5bdfa2d8843a2f84d85eb3a68a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -303,6 +304,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &223931948
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223931941}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b657a8424980ba48af3e270385fe42d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &329592718
 GameObject:
   m_ObjectHideFlags: 0
@@ -3371,12 +3391,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACQn+u8cqA2swIAAKIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFtVNtu2kAQ/RW0zwXZ5hb61gIhqZQElVZ5KHnY2ANesd619hIgEf/embWJDa2E5OXM9ZyZ3Q8mlC0hddosjMgedAbsa4fdW12AMyIlkH3pNF53cOBbrVbiHc7OzyJzOTnx4POTO6ERjynsnOeb2kpyHg564/5wRDavxEabYp5tYaqts2jdcGkBTUY7SqIQ+uiwA366gyHiRzwl4whP73iaRJ0THlNQDkzjGvXG8TAZTPp1QDfuJfEgToY34zqwOwyBXqWSFyVkRKaJ70d1YL/Kr5Bm7RH1qPFUSyls3R5zxzKoMOWl9cgRHTLBkXXoifxzENvcUevt4KfNxgKhVM7w40wYFK/Kyr7rStGC213V2RuXnuokw1Hoqkr68I+9Gwfzxuji7lw3jqiGy0W6+8mPKbeupXUbnl027tWeyx1/lfCcg3rUC6O9ytDojKdQbyGZNX8/qU1zSHcNXrV6BfqyNbFa8PNgicMpsD9MpSheg/KDClhJHfSekDMYnM09Nhy2xdYpEKUuflv4xbfttaoNt8JYh6aapaL2XrU35MrmQTNi491UGwUBrpsuQXHpjktM465HeGVrlb2y3HK6R3Xx2na+HlchAW78o+jKtNT7ZlgWfviiXGqh3Aq4SfNWPpvr/QPY/Mk7KRQ0jMjwiCJOtVLV+tn/hK282fC0Febg4LyBGXc8XALsCbcka4eioCFCeSlpIQMLSv4HWdDvhUTOOdaVAWaPWoXrc/F9oUXYepFdrjmbjPkwjm6iaJQk/f5k0IVoNBr1OR8MRuPJ5AZYuAdCoeZcLivR6lHhBqmGi8Kdp4z01HUWhpfh5mWG7xfivdCt8Qu10avUAKiniwwWDNbAJyKbZwJZrsA5ocLqsY81kzrdQbb+9F8HXecHZ/i6UWzNSvGmHSFrNg1v2pqd2OkvUEsDBBQAAAgIAACQn+u6MLkrbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSpXmiqaGBhYGBmZGRsbGliW6qgZmZmXFioomJmbmlpUWqUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACQn+u8cqA2swIAAKIFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACQn+u6MLkrbQAAAHgAAAAJACQAAAAAAAAAAAAAAAADAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAuAMAAAAA
+    dataString: UEsDBBQAAAgIAACQn+sHxrUVywIAAMMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFtVFtv2jAU/ivIzwM5EEKytw0o7aReNDb1YfTBTQ7EwtiRLwVa8d937IQmsCGkOOf6fd85zgfh0lSQW6UXmhf3qgDytUfujNqB1Tz3RvKl10bdwoFtlFzydzgHP/PClj6IhZifzHKF9sinnet8kxvhgxM6oP43StHrJF8rvZsXG5gqYw3610wYQJdW1peRaProkQM++vEY7Uc8DScUT+94ymjvhMccpAXdho7pIB1n6SSeNBlROhilkzRp0vrjBsQoDvlO5oLtKig8q7ZMFMcDmiZpwOrLxOkgymgUJVlIk8i/yaCDKImiCc3GmcejhOCmQU/ssQoyTVllHIqAAQVnKEuA7FUqgW9K65l1kx/XawPe6tlqdpxxjerWVcl3VUu+Y2ZbI35jwvk+w3ES0NVF7//x96PgXmu1uz33jajvYUueb3+yY86M7Yyia55dAndyz8SWvQp4LkE+qIVWThbotNr5VGdgOGtfP6lNS8i3rb2GemV0VTsJ2gzgPHfP4RTYH6aC717DBOLasBQq6J35YNA4ozsEHJbJNCXQ6lH8NvCLbbpb1zhuuDYWXQ1L6eG9Kqd9KJkHzTwbZ6dKSwjmBnQFkgl7fMIy9nqEV75O2yvPDfMXrWne+M735yolmNt4Sq9cT2rfDsvAD7ernhSXdglM52WnninV/h5M+eis4BJaRt7xgCJOlZT1+pn/pC2dXrO8k2bhYJ2GGbMsXALEhFtSdFNR0JAhnRB+IQMLX/wPsvD/Fy9yybCvCGbyoGS4PhfPF78IG8eLyzUn2YSNI5pSmgyHo1EW94EmSTJiLI6TSZalQMI94BI1Z+KpFq0ZFW6QbLlI3Hlf0X8LewvNqnDzCs32C/6+U53xc7lWy1wDyMeLCgY09sBPRTEvOLJcgrVchtUjHysiVL6FYvUZvwq6zg9Ws1Wr2IpU/E1Zb1mRafjkrciJnP4CUEsDBBQAAAgIAACQn+u6MLkrbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSpXmiqaGBhYGBmZGRsbGliW6qgZmZmXFioomJmbmlpUWqUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACQn+sHxrUVywIAAMMFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACQn+u6MLkrbQAAAHgAAAAJACQAAAAAAAAAAAAAABgDAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAA0AMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
     cacheStartup: 0
-  showNavGraphs: 1
+  showNavGraphs: 0
   showUnwalkableNodes: 1
   debugMode: 0
   debugFloor: 0
@@ -3403,7 +3423,7 @@ MonoBehaviour:
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
@@ -40910,6 +40930,7 @@ GameObject:
   - component: {fileID: 691154736}
   - component: {fileID: 691154735}
   - component: {fileID: 691154734}
+  - component: {fileID: 691154739}
   m_Layer: 0
   m_Name: Wildboar
   m_TagString: Untagged
@@ -40925,8 +40946,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691154732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.97, y: -13.95, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 14.371, y: -11.739, z: 0}
+  m_LocalScale: {x: 3.4032688, y: 3.4032688, z: 3.4032688}
   m_Children: []
   m_Father: {fileID: 585228188}
   m_RootOrder: 2
@@ -40944,9 +40965,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000059604645, y: 0}
+  m_Offset: {x: 0.011208502, y: -0.0928707}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.069272555
 --- !u!114 &691154735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40986,7 +41007,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   centerOffsetCompatibility: NaN
   orientation: 1
-  enableRotation: 1
+  enableRotation: 0
   targetCompatibility: {fileID: 0}
   maxAcceleration: 2
   rotationSpeed: 60
@@ -40996,7 +41017,7 @@ MonoBehaviour:
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
-  constrainInsideGraph: 0
+  constrainInsideGraph: 1
 --- !u!114 &691154737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41065,8 +41086,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 0.21920633, b: 1, a: 1}
+  m_Sprite: {fileID: -2263852665023595454, guid: 4703ebad4e40d9049bed21d275cd6839, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -41076,6 +41097,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &691154739
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691154732}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a939d4158807f36468102dff1dc7c3de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &750983474
 GameObject:
   m_ObjectHideFlags: 0
@@ -41157,7 +41197,7 @@ GameObject:
   - component: {fileID: 989377720}
   - component: {fileID: 989377719}
   - component: {fileID: 989377722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58568,6 +58608,7 @@ GameObject:
   - component: {fileID: 1062095653}
   - component: {fileID: 1062095652}
   - component: {fileID: 1062095651}
+  - component: {fileID: 1062095655}
   m_Layer: 0
   m_Name: familiarspirits
   m_TagString: Untagged
@@ -58707,17 +58748,36 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0.99633837, b: 0, a: 1}
+  m_Sprite: {fileID: -399403521112836534, guid: a457c20297a3b4e438ed4db68c09a202, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.57, y: 0.95}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1062095655
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062095649}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c73f9d46b908cc84193740ca2df2d65a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1355190113
 GameObject:
   m_ObjectHideFlags: 0
