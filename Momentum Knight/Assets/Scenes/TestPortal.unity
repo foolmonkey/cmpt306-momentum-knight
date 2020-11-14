@@ -21172,10 +21172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToCreate: {fileID: 436490571}
+  parent: {fileID: 0}
   numRows: 5
   numColumns: 5
-  offsetX: -1
-  offsetY: -0.5
+  offsetX: 0.5
+  offsetY: 0.25
 --- !u!4 &1276329288
 Transform:
   m_ObjectHideFlags: 0
