@@ -30,12 +30,18 @@ public class PickupItem : MonoBehaviour
 
         if (isFollow)
         {
-            if (distanceFromTarget < 0.1f)
+            if (distanceFromTarget < 0.2f)
             {
                 RemoveItem();
             }
             else if (distanceFromTarget < followDistance || hasCollided)
             {
+                // change follow speed when too far
+                if (distanceFromTarget > 2)
+                {
+                    speedToFollow += speedToFollow / 3;
+                }
+
                 hasCollided = true;
                 transform.position = Vector3.MoveTowards(transform.position, target.position, speedToFollow * Time.deltaTime);
             }
