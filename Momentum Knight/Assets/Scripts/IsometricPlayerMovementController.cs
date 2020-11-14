@@ -77,7 +77,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
             if (prevVelocity.magnitude < maxSpeed)
             {
-                Debug.Log("hi");
                 rbody.AddForce(transform.up * currSpeedDir);
                 rbody.AddForce(transform.right * currSpeed);
             }
