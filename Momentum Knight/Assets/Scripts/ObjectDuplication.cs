@@ -23,7 +23,8 @@ public class ObjectDuplication : MonoBehaviour
         {
             for (int j = 0; j < numColumns; j++)
             {
-                Instantiate(objectsToCreate, new Vector3((j * offset) + (i * offset), (j * offsetY) - (i * offsetY), 0), Quaternion.identity, parent);
+                Vector3 spawnPosition = new Vector3((j * offset) + (i * offset), (j * offsetY) - (i * offsetY), 0);
+                Instantiate(objectsToCreate, parent.position + spawnPosition, Quaternion.identity, parent);
             }
         }
     }
