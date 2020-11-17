@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class PickupItem : MonoBehaviour
 {
+    public PlayerManager playerManager;
     public Transform target;
     public bool isFollow = false;
     public float followDistance = 1.5f;
     public float speedToFollow = 1.0f;
     private bool hasCollided = false;
 
+    private bool pickedUp;
+
     private void Awake()
     {
+        pickedUp = false;
+
         target = GameObject.FindWithTag("Player").GetComponent<Transform>();
         if (gameObject.tag == "Currency")
         {
@@ -21,7 +26,19 @@ public class PickupItem : MonoBehaviour
 
     private void RemoveItem()
     {
-        Destroy(gameObject);
+        switch (gameObject.tag)
+        {
+            case "Currency":
+                pickedUp = playerManager.addCoin();
+                break;
+            default:
+                break;
+        }
+
+        if (pickedUp)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
