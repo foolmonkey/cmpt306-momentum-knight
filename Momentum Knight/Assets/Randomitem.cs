@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+/// 
+/// 随机生成闹钟和铃铛
+/// 
 public class Randomitem : MonoBehaviour
 {
+    //单例
     public static Randomitem Instance;
     public GameObject[] Prefabs;
     public Vector2 minPos, maxPos;
