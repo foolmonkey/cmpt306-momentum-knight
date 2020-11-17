@@ -5,11 +5,13 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public Transform player;
+    public bool playerIsMoving;
+    private float manaTimer = 0.0f;
+    private float manaRegen = 0.2f;
     public int currentHealth;
     public int maxHealth;
     public int currentMana;
     public int maxMana;
-
     public int currentCoins;
 
     public void manaDown(int mana)
@@ -58,5 +60,19 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            manaDown(10);
+        }
+
+        if (currentMana < maxMana && playerIsMoving)
+        {
+            manaTimer += Time.deltaTime;
+        }
+        if (currentMana < maxMana && manaTimer >= manaRegen)
+        {
+            manaTimer = manaTimer - manaRegen;
+            currentMana += 1;
+        }
     }
 }

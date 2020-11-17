@@ -5,8 +5,12 @@ using TMPro;
 
 public class CoinUI : MonoBehaviour
 {
-    public PlayerManager playerManager;
+    private PlayerManager playerManager;
     public TextMeshProUGUI currentCoinText;
+
+    private void Awake() {
+        playerManager = (PlayerManager) FindObjectOfType(typeof(PlayerManager));
+    }
 
     // Update is called once per frame
     void Update()

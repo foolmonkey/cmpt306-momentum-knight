@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class IsometricPlayerMovementController : MonoBehaviour
 {
+    // player manager
+    PlayerManager playerManager;
 
     //Variables required to calculate momentum
     public float maxSpeed = 2.0f;
@@ -20,6 +22,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     private void Awake()
     {
+        playerManager = (PlayerManager)FindObjectOfType(typeof(PlayerManager));
+
         rbody = GetComponent<Rigidbody2D>();
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
     }
@@ -62,6 +66,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
         if (inputVector == new Vector2(0, 0))
         {
+            playerManager.playerIsMoving = false;
             if (!ice)
             {
                 rbody.velocity = new Vector3(0, 0, 0);
@@ -72,163 +77,183 @@ public class IsometricPlayerMovementController : MonoBehaviour
                 currSpeed -= accelerationAdjusted * 2f;
             }
         }
-        //up and to the right
-        else if (inputVector == new Vector2(1, 1))
+        else
         {
-            if ((!ice && (rbody.velocity.x < 0)) || rbody.velocity.y < 0)
-            {
-                rbody.velocity = new Vector2(0, 0);
-            }
+            playerManager.playerIsMoving = true;
 
-            if (((wasRight && wasUp) && prevVelocity.magnitude < maxSpeed) || !(wasRight && wasUp) || rbody.velocity.magnitude < 0.5)
+            //up and to the right
+            if (inputVector == new Vector2(1, 1))
             {
-                if (rbody.velocity.magnitude < 1)
+                if ((!ice && (rbody.velocity.x < 0)) || rbody.velocity.y < 0)
                 {
+                    rbody.velocity = new Vector2(0, 0);
+                }
+
+                rbody.velocity = new Vector2(Math.Abs(prevVelocity.x), Math.Abs(prevVelocity.y));
+
+                if (((wasRight && wasUp) && prevVelocity.magnitude < maxSpeed) || !(wasRight && wasUp) || rbody.velocity.magnitude < 0.5)
+                {
+                    if (rbody.velocity.magnitude < 1)
+                    {
+                        rbody.AddForce(transform.up * currSpeedDir);
+                    }
                     rbody.AddForce(transform.up * currSpeedDir);
+                    rbody.AddForce(transform.right * currSpeed);
                 }
-                rbody.AddForce(transform.up * currSpeedDir);
-                rbody.AddForce(transform.right * currSpeed);
             }
-        }
-        //move down and to the left
-        else if (inputVector == new Vector2(-1, -1))
-        {
-            if ((!ice && (rbody.velocity.x > 0)) || rbody.velocity.y > 0)
+            //move down and to the left
+            else if (inputVector == new Vector2(-1, -1))
             {
-                rbody.velocity = new Vector2(0, 0);
-            }
-
-            if (((wasLeft && wasDown) && prevVelocity.magnitude < maxSpeed) || !(wasLeft && wasDown) || rbody.velocity.magnitude < 0.5)
-            {
-                if (rbody.velocity.magnitude < 1)
+                if ((!ice && (rbody.velocity.x > 0)) || rbody.velocity.y > 0)
                 {
+                    rbody.velocity = new Vector2(0, 0);
+                }
+
+                rbody.velocity = new Vector2(-Math.Abs(prevVelocity.x), -Math.Abs(prevVelocity.y));
+
+                if (((wasLeft && wasDown) && prevVelocity.magnitude < maxSpeed) || !(wasLeft && wasDown) || rbody.velocity.magnitude < 0.5)
+                {
+                    if (rbody.velocity.magnitude < 1)
+                    {
+                        rbody.AddForce(transform.up * -currSpeedDir);
+                        rbody.AddForce(transform.right * -currSpeed);
+                    }
                     rbody.AddForce(transform.up * -currSpeedDir);
                     rbody.AddForce(transform.right * -currSpeed);
+                    Debug.Log("hi");
                 }
-                rbody.AddForce(transform.up * -currSpeedDir);
-                rbody.AddForce(transform.right * -currSpeed);
-                Debug.Log("hi");
-            }
-        }
-
-        //move down and to the right
-        else if (inputVector == new Vector2(1, -1))
-        {
-            if ((!ice && (rbody.velocity.x < 0)) || rbody.velocity.y > 0)
-            {
-                rbody.velocity = new Vector2(0, 0);
             }
 
-            if (((wasRight && wasDown) && prevVelocity.magnitude < maxSpeed) || !(wasRight && wasDown) || rbody.velocity.magnitude < 0.5)
+            //move down and to the right
+            else if (inputVector == new Vector2(1, -1))
             {
-                if (rbody.velocity.magnitude < 1)
+                if ((!ice && (rbody.velocity.x < 0)) || rbody.velocity.y > 0)
                 {
+                    rbody.velocity = new Vector2(0, 0);
+                }
+
+                rbody.velocity = new Vector2(Math.Abs(prevVelocity.x), -Math.Abs(prevVelocity.y));
+
+                if (((wasRight && wasDown) && prevVelocity.magnitude < maxSpeed) || !(wasRight && wasDown) || rbody.velocity.magnitude < 0.5)
+                {
+                    if (rbody.velocity.magnitude < 1)
+                    {
+                        rbody.AddForce(transform.up * -currSpeedDir);
+                        rbody.AddForce(transform.right * currSpeed);
+                    }
                     rbody.AddForce(transform.up * -currSpeedDir);
                     rbody.AddForce(transform.right * currSpeed);
                 }
-                rbody.AddForce(transform.up * -currSpeedDir);
-                rbody.AddForce(transform.right * currSpeed);
-            }
-        }
-
-        //move up and to the left
-        else if (inputVector == new Vector2(-1, 1))
-        {
-            if ((!ice && (rbody.velocity.x > 0)) || rbody.velocity.y < 0)
-            {
-                rbody.velocity = new Vector2(0, 0);
             }
 
-            if (((wasLeft && wasUp) && prevVelocity.magnitude < maxSpeed) || !(wasLeft && wasUp) || rbody.velocity.magnitude < 0.5)
+            //move up and to the left
+            else if (inputVector == new Vector2(-1, 1))
             {
-                if (rbody.velocity.magnitude < 1)
+                if ((!ice && (rbody.velocity.x > 0)) || rbody.velocity.y < 0)
                 {
+                    rbody.velocity = new Vector2(0, 0);
+                }
+
+                rbody.velocity = new Vector2(-Math.Abs(prevVelocity.x), Math.Abs(prevVelocity.y));
+
+                if (((wasLeft && wasUp) && prevVelocity.magnitude < maxSpeed) || !(wasLeft && wasUp) || rbody.velocity.magnitude < 0.5)
+                {
+                    if (rbody.velocity.magnitude < 1)
+                    {
+                        rbody.AddForce(transform.up * currSpeed);
+                        rbody.AddForce(transform.right * -currSpeed);
+                    }
+
                     rbody.AddForce(transform.up * currSpeed);
                     rbody.AddForce(transform.right * -currSpeed);
                 }
-
-                rbody.AddForce(transform.up * currSpeed);
-                rbody.AddForce(transform.right * -currSpeed);
-            }
-        }
-
-        //move to the left
-        else if (inputVector == new Vector2(-1, 0))
-        {
-            if ((!ice && (rbody.velocity.x > 0)) || Math.Abs(rbody.velocity.y) > 0)
-            {
-                rbody.velocity = new Vector2(0, 0);
             }
 
-            if (prevVelocity.magnitude < maxSpeed)
+            //move to the left
+            else if (inputVector == new Vector2(-1, 0))
             {
-                if (rbody.velocity.magnitude < 1)
+                if ((!ice && (rbody.velocity.x > 0)) || Math.Abs(rbody.velocity.y) > 0)
                 {
+                    rbody.velocity = new Vector2(0, 0);
+                }
+
+                // rbody.velocity = new Vector2(-Math.Abs(prevVelocity.magnitude), 0);
+
+                if (prevVelocity.magnitude < maxSpeed)
+                {
+                    if (rbody.velocity.magnitude < 1)
+                    {
+                        rbody.AddForce(transform.right * -currSpeed);
+                    }
                     rbody.AddForce(transform.right * -currSpeed);
                 }
-                rbody.AddForce(transform.right * -currSpeed);
-            }
-        }
-
-        //move up
-        else if (inputVector == new Vector2(0, 1))
-        {
-            if ((!ice && (rbody.velocity.y < 0)) || Math.Abs(rbody.velocity.x) > 0)
-            {
-                rbody.velocity = new Vector2(0, 0);
             }
 
-            if (prevVelocity.magnitude < maxSpeed)
+            //move up
+            else if (inputVector == new Vector2(0, 1))
             {
-                if (rbody.velocity.magnitude < 1)
+                if ((!ice && (rbody.velocity.y < 0)) || Math.Abs(rbody.velocity.x) > 0)
                 {
+                    rbody.velocity = new Vector2(0, 0);
+                }
+
+                // rbody.velocity = new Vector2(0, Math.Abs(prevVelocity.magnitude));
+
+                if (prevVelocity.magnitude < maxSpeed)
+                {
+                    if (rbody.velocity.magnitude < 1)
+                    {
+                        rbody.AddForce(transform.up * currSpeed);
+                    }
                     rbody.AddForce(transform.up * currSpeed);
                 }
-                rbody.AddForce(transform.up * currSpeed);
-            }
-        }
-
-        //move right
-        else if (inputVector == new Vector2(1, 0))
-        {
-            if ((!ice && rbody.velocity.x < 0) || Math.Abs(rbody.velocity.y) > 0)
-            {
-                rbody.velocity = new Vector2(0, 0);
             }
 
-            if (prevVelocity.magnitude < maxSpeed)
+            //move right
+            else if (inputVector == new Vector2(1, 0))
             {
-                if (rbody.velocity.magnitude < 1)
+                if ((!ice && rbody.velocity.x < 0) || Math.Abs(rbody.velocity.y) > 0)
                 {
+                    rbody.velocity = new Vector2(0, 0);
+                }
+
+                // rbody.velocity = new Vector2(Math.Abs(prevVelocity.magnitude), 0);
+
+                if (prevVelocity.magnitude < maxSpeed)
+                {
+                    if (rbody.velocity.magnitude < 1)
+                    {
+                        rbody.AddForce(transform.right * currSpeed);
+                    }
                     rbody.AddForce(transform.right * currSpeed);
                 }
-                rbody.AddForce(transform.right * currSpeed);
-            }
-        }
-
-        //move down
-        else if (inputVector == new Vector2(0, -1))
-        {
-            if ((!ice && (rbody.velocity.y > 0)) || Math.Abs(rbody.velocity.x) > 0)
-            {
-                rbody.velocity = new Vector2(0, 0);
             }
 
-            if (prevVelocity.magnitude < maxSpeed)
+            //move down
+            else if (inputVector == new Vector2(0, -1))
             {
-                if (rbody.velocity.magnitude < 1)
+                if ((!ice && (rbody.velocity.y > 0)) || Math.Abs(rbody.velocity.x) > 0)
                 {
+                    rbody.velocity = new Vector2(0, 0);
+                }
+
+                // rbody.velocity = new Vector2(0, -Math.Abs(prevVelocity.magnitude));
+
+                if (prevVelocity.magnitude < maxSpeed)
+                {
+                    if (rbody.velocity.magnitude < 1)
+                    {
+                        rbody.AddForce(transform.up * -currSpeed);
+                    }
                     rbody.AddForce(transform.up * -currSpeed);
                 }
-                rbody.AddForce(transform.up * -currSpeed);
+            }
+
+            if (currSpeed < maxSpeed)
+            {
+                currSpeed += accelerationAdjusted;
             }
         }
-
-        if (currSpeed < maxSpeed)
-        {
-            currSpeed += accelerationAdjusted;
-        }
-
 
         isoRenderer.SetDirection(movement);
     }

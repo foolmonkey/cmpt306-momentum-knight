@@ -145,7 +145,6 @@ GameObject:
   - component: {fileID: 2455576570174373481}
   - component: {fileID: 2455576570174373480}
   - component: {fileID: 3943284427667857456}
-  - component: {fileID: 1965253027285344936}
   - component: {fileID: 4833862512181713455}
   m_Layer: 0
   m_Name: Player Knight
@@ -232,21 +231,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponTransform: {fileID: 0}
   playerCurrentPosition: {fileID: 886027417401447989}
---- !u!114 &1965253027285344936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886027417401447984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9aafb4243363268448c030d58b75fe75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerManager: {fileID: 0}
-  healthBar: {fileID: 0}
-  manaBar: {fileID: 0}
 --- !u!114 &4833862512181713455
 MonoBehaviour:
   m_ObjectHideFlags: 0

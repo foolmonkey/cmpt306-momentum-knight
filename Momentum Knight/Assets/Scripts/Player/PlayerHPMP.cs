@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerHPMP : MonoBehaviour
 {
-    public PlayerManager playerManager;
+    private PlayerManager playerManager;
 
     public HealthBar healthBar;
     public ManaBar manaBar;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+        playerManager = (PlayerManager)FindObjectOfType(typeof(PlayerManager));
         healthBar.setMaxHealth(playerManager.maxHealth);
         manaBar.setMaxMana(playerManager.maxMana);
     }

@@ -7,9 +7,21 @@ using TMPro;
 
 public class HealthBar : MonoBehaviour
 {
+    public PlayerManager playerManager;
     public TextMeshProUGUI currentHealthText;
 
     public Slider slider;
+
+    private void Awake()
+    {
+        playerManager = (PlayerManager)FindObjectOfType(typeof(PlayerManager));
+        setMaxHealth(playerManager.maxHealth);
+    }
+
+    private void Update()
+    {
+        setHealth(playerManager.currentHealth);
+    }
 
     public void setHealth(int health)
     {
