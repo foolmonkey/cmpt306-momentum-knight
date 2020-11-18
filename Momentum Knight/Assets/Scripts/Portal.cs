@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
-    [SerializeField] 
+    [SerializeField]
     private string levelSceneName;
 
     void Awake()
