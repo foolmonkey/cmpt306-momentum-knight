@@ -66,6 +66,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
         if (inputVector == new Vector2(0, 0))
         {
+            // detects player movement
             playerManager.playerIsMoving = false;
             if (!ice)
             {
@@ -79,6 +80,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
         }
         else
         {
+            // detects player movement
             playerManager.playerIsMoving = true;
 
             //up and to the right
@@ -91,6 +93,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
                 rbody.velocity = new Vector2(Math.Abs(prevVelocity.x), Math.Abs(prevVelocity.y));
 
+                // constraints for adding force in current direction
                 if (((wasRight && wasUp) && prevVelocity.magnitude < maxSpeed) || !(wasRight && wasUp) || rbody.velocity.magnitude < 0.5)
                 {
                     if (rbody.velocity.magnitude < 1)

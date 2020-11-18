@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3327eb9965b4a42a11852cee29b8a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponTransform: {fileID: 0}
+  weaponTransform: {fileID: 3618705777721403975}
   playerCurrentPosition: {fileID: 886027417401447989}
 --- !u!114 &4833862512181713455
 MonoBehaviour:
@@ -244,6 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 886027417401447989}
+  playerIsMoving: 0
   currentHealth: 0
   maxHealth: 80
   currentMana: 0

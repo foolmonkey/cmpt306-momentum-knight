@@ -48,12 +48,13 @@ public class PlayerManager : MonoBehaviour
         {
             maxHealth = 100;
         }
-        currentHealth = maxHealth;
         if (maxMana == 0)
         {
             maxMana = 100;
         }
-        currentMana = maxMana;
+
+        currentHealth = maxHealth;
+        currentMana = 0;
         currentCoins = 0;
     }
 
@@ -62,7 +63,10 @@ public class PlayerManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            manaDown(10);
+            if (currentMana >= 20)
+            {
+                manaDown(20);
+            }
         }
 
         if (currentMana < maxMana && playerIsMoving)

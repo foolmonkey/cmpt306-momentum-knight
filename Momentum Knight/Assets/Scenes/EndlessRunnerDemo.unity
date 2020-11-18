@@ -13030,14 +13030,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2455576570174373480, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
-      propertyPath: maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2455576570174373480, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
-      propertyPath: ice
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2455576570174373481, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
       propertyPath: m_SortingOrder
       value: 5
