@@ -22,9 +22,6 @@ public class RoonGen : MonoBehaviour
     public LayerMask roomLayer;
     // Use this for initialization
 
-    [Header("Position Setting")]
-
-
     public List<GameObject> rooms = new List<GameObject>();
 
 
@@ -53,8 +50,11 @@ public class RoonGen : MonoBehaviour
 
     public void ChangePos()
     {
+
+
         do
         {
+
             direction = Random.Range(0, 4);
             switch (Mathf.RoundToInt(Random.Range(0, 4)))
             {

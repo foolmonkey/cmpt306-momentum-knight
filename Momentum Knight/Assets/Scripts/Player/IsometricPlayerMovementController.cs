@@ -123,7 +123,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
                     }
                     rbody.AddForce(transform.up * -currSpeedDir);
                     rbody.AddForce(transform.right * -currSpeed);
-                    Debug.Log("hi");
                 }
             }
 
