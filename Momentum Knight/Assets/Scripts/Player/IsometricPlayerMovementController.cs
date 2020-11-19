@@ -255,6 +255,13 @@ public class IsometricPlayerMovementController : MonoBehaviour
             {
                 currSpeed += accelerationAdjusted;
             }
+
+            // attacking
+            if (Input.GetKeyDown("space") && playerManager.currentMana > 20)
+            {
+                rbody.AddForce(transform.up * rbody.velocity.y);
+                rbody.AddForce(transform.right * rbody.velocity.x);
+            }
         }
 
         isoRenderer.SetDirection(movement);
