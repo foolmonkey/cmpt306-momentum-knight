@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 2455576570174373481}
   - component: {fileID: 2455576570174373480}
   - component: {fileID: 4833862512181713455}
+  - component: {fileID: 1479716930594624091}
   m_Layer: 0
   m_Name: Player Knight
   m_TagString: Player
@@ -231,10 +232,25 @@ MonoBehaviour:
   player: {fileID: 886027417401447989}
   playerIsMoving: 0
   currentHealth: 0
-  maxHealth: 80
+  maxHealth: 100
   currentMana: 0
   maxMana: 80
   currentCoins: 0
+  LD: {fileID: 0}
+--- !u!114 &1479716930594624091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886027417401447984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3327eb9965b4a42a11852cee29b8a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponTransform: {fileID: 3618705777721403975}
+  playerCurrentPosition: {fileID: 886027417401447989}
 --- !u!95 &5996300868830585231
 Animator:
   serializedVersion: 3
