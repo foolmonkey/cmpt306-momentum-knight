@@ -390,6 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89930d91430d9a049ae077fd78838d06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerManager: {fileID: 0}
   currentHealthText: {fileID: 2737591228533720816}
   slider: {fileID: 3540439695516687606}
 --- !u!1 &3540439695840736559
@@ -947,7 +948,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -57.54001, y: 181.84998}
+  m_AnchoredPosition: {x: 0, y: 184.84998}
   m_SizeDelta: {x: 249.63348, y: 38.260406}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1339193965055516319
@@ -1000,5 +1001,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c463fd11da42b446ac435ba3073182d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerManager: {fileID: 0}
   currentCoinText: {fileID: 6559774652057493933}

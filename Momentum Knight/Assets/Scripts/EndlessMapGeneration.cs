@@ -21,10 +21,10 @@ public class EndlessMapGeneration : MonoBehaviour
 
     [Header("Position Setting")]
     public Transform point;
-    public float positionleftX;
-    public float positionleftY;
-    public float positionUpX;
-    public float positionUpY;
+
+    public float positionRight;
+    public float positionUp;
+
     private Vector3 currentDirectionVector;
     public LayerMask roomLayer;
 
@@ -49,7 +49,14 @@ public class EndlessMapGeneration : MonoBehaviour
 
             rooms.Add(newRoom);
             MoveToCurrentPosition();
+            prevDirection = 0;
+            direction = 0;
+
+            deleteWalls(newRoom);
+
             generatedRooms++;
+
+            prevDirection = direction;
         }
         isCreatingRooms = false;
 
@@ -81,7 +88,16 @@ public class EndlessMapGeneration : MonoBehaviour
                         GameObject newRoom = Instantiate(roomPrefab, point.position, Quaternion.identity);
                         rooms.Add(newRoom);
                         MoveToCurrentPosition();
+
+                        // delete walls depending on direction
+                        if (i < hall)
+                        {
+                            deleteWalls(newRoom);
+                        }
+
                         generatedRooms++;
+
+                        prevDirection = direction;
                     }
                     ChangeRandomPos();
 
@@ -106,19 +122,78 @@ public class EndlessMapGeneration : MonoBehaviour
         {
             case 0:
                 // up
-                point.position += new Vector3(positionUpX, positionUpY, 0);
+                point.position += new Vector3(positionRight, positionUp, 0);
                 break;
             case 1:
                 // down
-                point.position -= new Vector3(positionUpX, positionUpY, 0);
+                point.position += new Vector3(-positionRight, -positionUp, 0);
                 break;
             case 2:
                 // left
-                point.position -= new Vector3(positionleftX, positionleftY, 0);
+                point.position += new Vector3(-positionRight, positionUp, 0);
                 break;
             case 3:
                 // right
-                point.position += new Vector3(positionleftX, positionleftY, 0);
+                point.position += new Vector3(positionRight, -positionUp, 0);
+                break;
+        }
+    }
+
+    public void deleteWalls(GameObject newRoom)
+    {
+        switch (direction)
+        {
+            // up
+            case 0:
+                if (prevDirection == 2)
+                {
+                    Destroy(newRoom.transform.Find("SE").gameObject);
+                }
+                else if (prevDirection == 3)
+                {
+                    Destroy(newRoom.transform.Find("NW").gameObject);
+                }
+                Destroy(newRoom.transform.Find("NE").gameObject);
+                Destroy(newRoom.transform.Find("SW").gameObject);
+                break;
+            // down
+            case 1:
+                if (prevDirection == 2)
+                {
+                    Destroy(newRoom.transform.Find("NW").gameObject);
+                }
+                else if (prevDirection == 3)
+                {
+                    Destroy(newRoom.transform.Find("SE").gameObject);
+                }
+                Destroy(newRoom.transform.Find("NE").gameObject);
+                Destroy(newRoom.transform.Find("SW").gameObject);
+                break;
+            // left
+            case 2:
+                if (prevDirection == 0)
+                {
+                    Destroy(newRoom.transform.Find("SW").gameObject);
+                }
+                else if (prevDirection == 1)
+                {
+                    Destroy(newRoom.transform.Find("NE").gameObject);
+                }
+                Destroy(newRoom.transform.Find("NW").gameObject);
+                Destroy(newRoom.transform.Find("SE").gameObject);
+                break;
+            // right
+            case 3:
+                if (prevDirection == 0)
+                {
+                    Destroy(newRoom.transform.Find("SW").gameObject);
+                }
+                else if (prevDirection == 1)
+                {
+                    Destroy(newRoom.transform.Find("NE").gameObject);
+                }
+                Destroy(newRoom.transform.Find("NE").gameObject);
+                Destroy(newRoom.transform.Find("SW").gameObject);
                 break;
         }
     }

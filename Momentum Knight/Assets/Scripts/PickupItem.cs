@@ -17,6 +17,7 @@ public class PickupItem : MonoBehaviour
     {
         pickedUp = false;
 
+        playerManager = (PlayerManager)FindObjectOfType(typeof(PlayerManager));
         target = GameObject.FindWithTag("Player").GetComponent<Transform>();
         if (gameObject.tag == "Currency")
         {
