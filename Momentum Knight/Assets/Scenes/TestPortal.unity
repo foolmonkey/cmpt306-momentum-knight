@@ -6534,7 +6534,6 @@ GameObject:
   - component: {fileID: 85266235}
   - component: {fileID: 85266234}
   - component: {fileID: 85266232}
-  - component: {fileID: 85266233}
   m_Layer: 0
   m_Name: White
   m_TagString: Untagged
@@ -6575,31 +6574,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &85266233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 85266230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f44a92ef8e59ccc42a88a818958445f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wanderRadius: 9
-  alertRadius: 10
-  defendRadius: 8
-  chaseRadius: 7
-  attackRange: 3
-  walkSpeed: 2
-  runSpeed: 4
-  turnSpeed: 1
-  actionWeight:
-  - 3000
-  - 3000
-  - 4000
-  actRestTme: 1
 --- !u!114 &85266234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21304,6 +21278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d875d29c3b0c29f45a18d46c560a6394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerManager: {fileID: 0}
   target: {fileID: 0}
   isFollow: 0
   followDistance: 1.3
