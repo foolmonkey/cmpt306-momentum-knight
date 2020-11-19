@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
-    public LevelLoader levelLoader;
+    private LevelLoader levelLoader;
     void Awake()
     {
         levelLoader = (LevelLoader)GameObject.FindObjectOfType(typeof(LevelLoader));
