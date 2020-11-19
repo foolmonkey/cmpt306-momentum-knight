@@ -30,7 +30,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         //Getting current position and user inputs 
         Vector2 currentPos = rbody.position;
