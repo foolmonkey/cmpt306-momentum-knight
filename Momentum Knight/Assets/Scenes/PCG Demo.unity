@@ -191,7 +191,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -339,16 +339,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
-  roomPrefab: {fileID: 6394453549047961608, guid: 59430c6386e2a86498d93d527b0f7ade, type: 3}
+  roomPrefab: {fileID: 4602005861133652321, guid: f7a8fa18b7af70b4387c654756ef56d4, type: 3}
   roomNumber: 50
   generatedRooms: 0
   startColor: {r: 0, g: 0, b: 0, a: 0}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   point: {fileID: 1657365198}
-  positionleftX: 6
-  positionleftY: -3
-  positionUpX: 8.5
-  positionUpY: 4.3
+  positionRight: 8
+  positionUp: 4
   roomLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -499,10 +497,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 3943284427667857456, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
-      propertyPath: weaponTransform
-      value: 
-      objectReference: {fileID: 1749987467}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
 --- !u!4 &1749987467 stripped
@@ -860,7 +854,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: -399403521112836534, guid: a457c20297a3b4e438ed4db68c09a202, type: 3}
   m_Color: {r: 0.9716981, g: 0.908675, b: 0.041251317, a: 1}
   m_FlipX: 1
@@ -917,3 +911,22 @@ Transform:
   m_Father: {fileID: 2041415056}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2127805250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3618705777721403974, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
+  m_PrefabInstance: {fileID: 1749987466}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2127805251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127805250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3327eb9965b4a42a11852cee29b8a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponTransform: {fileID: 1749987467}
+  playerCurrentPosition: {fileID: 1749987468}

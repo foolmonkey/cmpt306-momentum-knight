@@ -13,6 +13,7 @@ public class PlayerManager : MonoBehaviour
     public int currentMana;
     public int maxMana;
     public int currentCoins;
+    public LevelLoader LD;
 
     public void manaDown(int mana)
     {
@@ -77,6 +78,12 @@ public class PlayerManager : MonoBehaviour
         {
             manaTimer = manaTimer - manaRegen;
             currentMana += 1;
+        }
+
+        if(currentHealth == 0)
+        {
+            Debug.Log("Player Dead");
+            LD.LoadSpecificLevel(0);
         }
     }
 }
