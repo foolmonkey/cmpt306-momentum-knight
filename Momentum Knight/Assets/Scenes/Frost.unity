@@ -164,7 +164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1165548440675175319, guid: 7fc7ffbfdebf04b49b97478a776fcb04, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1165548440675175319, guid: 7fc7ffbfdebf04b49b97478a776fcb04, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -17023,6 +17023,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 886027417401447989, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
   m_PrefabInstance: {fileID: 727390796}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &727390798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 886027416745461499, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
+  m_PrefabInstance: {fileID: 727390796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &727390799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727390798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f994f34696330d949b33027f9a428103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PM: {fileID: 1946341510}
 --- !u!1001 &753826746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24603,7 +24621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73158c641c0ef274f8e0a0be9a9e0903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelLoader: {fileID: 0}
 --- !u!66 &1037633989
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -33004,7 +33021,7 @@ Transform:
   - {fileID: 1037633987}
   - {fileID: 876172067}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1946341510 stripped
 MonoBehaviour:
@@ -33033,6 +33050,18 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1965319290}
+    - target: {fileID: 4942649177514021159, guid: 942795b917865694e8e8334a432c758c, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 727390797}
+    - target: {fileID: 6926615314299123852, guid: 942795b917865694e8e8334a432c758c, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 727390797}
+    - target: {fileID: 8302913379017091705, guid: 942795b917865694e8e8334a432c758c, type: 3}
+      propertyPath: whenCloseToDestination
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8710853385551826993, guid: 942795b917865694e8e8334a432c758c, type: 3}
       propertyPath: target
       value: 

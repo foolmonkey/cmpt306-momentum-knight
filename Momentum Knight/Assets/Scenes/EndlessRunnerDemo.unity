@@ -13387,7 +13387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1154906047}
   isFollow: 1
-  followDistance: 3
+  followDistance: 4
   speedToFollow: 0.5
 --- !u!1 &1348429441
 GameObject:
@@ -15204,6 +15204,24 @@ MonoBehaviour:
   numRows: 1
   numColumns: 10
   offset: 8
+--- !u!1 &1727968372 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 886027416745461499, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
+  m_PrefabInstance: {fileID: 1272894170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1727968374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727968372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f994f34696330d949b33027f9a428103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PM: {fileID: 92795666}
 --- !u!1 &1764897573
 GameObject:
   m_ObjectHideFlags: 0
@@ -23056,6 +23074,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 691618146003484553, guid: 1d365536491f0e64eb09b08012ff8bd7, type: 3}
+      propertyPath: MoveRandom.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 691618146003484553, guid: 1d365536491f0e64eb09b08012ff8bd7, type: 3}
+      propertyPath: MoveRandom.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 691618146003484553, guid: 1d365536491f0e64eb09b08012ff8bd7, type: 3}
+      propertyPath: ReWaitTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 691618146003484553, guid: 1d365536491f0e64eb09b08012ff8bd7, type: 3}
+      propertyPath: WaitTimeEnd
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 691618146003484662, guid: 1d365536491f0e64eb09b08012ff8bd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.28
@@ -23103,6 +23137,14 @@ PrefabInstance:
     - target: {fileID: 691618146003484663, guid: 1d365536491f0e64eb09b08012ff8bd7, type: 3}
       propertyPath: m_Name
       value: Goldeater
+      objectReference: {fileID: 0}
+    - target: {fileID: 691618146234103973, guid: 1d365536491f0e64eb09b08012ff8bd7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 691618146234103973, guid: 1d365536491f0e64eb09b08012ff8bd7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d365536491f0e64eb09b08012ff8bd7, type: 3}
@@ -23238,6 +23280,10 @@ PrefabInstance:
     - target: {fileID: 7650164345334913283, guid: aaf1af29220596943bd072eacd5bc694, type: 3}
       propertyPath: m_Name
       value: Red(Patrol
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650164345334913283, guid: aaf1af29220596943bd072eacd5bc694, type: 3}
+      propertyPath: m_TagString
+      value: Roadblock
       objectReference: {fileID: 0}
     - target: {fileID: 7650164345334913284, guid: aaf1af29220596943bd072eacd5bc694, type: 3}
       propertyPath: m_LocalPosition.x

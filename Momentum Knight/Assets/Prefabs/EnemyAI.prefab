@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8471445388732609939}
   m_Layer: 0
   m_Name: Ghost (4)
-  m_TagString: Enemy
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 8471445389187483929}
   m_Layer: 0
   m_Name: Ghost (6)
-  m_TagString: Enemy
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -770,7 +770,7 @@ GameObject:
   - component: {fileID: 8471445389325023529}
   m_Layer: 0
   m_Name: Red(Patrol (1)
-  m_TagString: Enemy
+  m_TagString: Roadblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -972,7 +972,7 @@ GameObject:
   - component: {fileID: 8471445389385309488}
   m_Layer: 0
   m_Name: Ghost (2)
-  m_TagString: Enemy
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1161,7 +1161,7 @@ GameObject:
   - component: {fileID: 8471445389427371943}
   m_Layer: 0
   m_Name: Ghost (1)
-  m_TagString: Enemy
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1350,7 +1350,7 @@ GameObject:
   - component: {fileID: 8471445389469582871}
   m_Layer: 0
   m_Name: Ghost (5)
-  m_TagString: Enemy
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1740,7 +1740,7 @@ GameObject:
   - component: {fileID: 8471445390542435617}
   m_Layer: 0
   m_Name: Red(Patrol
-  m_TagString: Enemy
+  m_TagString: Roadblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1944,7 +1944,7 @@ GameObject:
   - component: {fileID: 8471445390664777934}
   m_Layer: 0
   m_Name: Ghost (3)
-  m_TagString: Enemy
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -8,6 +8,8 @@ TagManager:
   - Item
   - Currency
   - Goldeater
+  - Roadblock
+  - Ghost
   layers:
   - Default
   - TransparentFX

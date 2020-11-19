@@ -25,5 +25,13 @@ public class DamagePlayer : MonoBehaviour
         {
             PM.healthDown(25);
         }
+        else if (collision.gameObject.tag == "Ghost")
+        {
+            PM.healthDown(1);
+        }
+        else if (collision.gameObject.tag == "Roadblock")
+        {
+            PM.healthDown(5);
+        }
     }
 }
