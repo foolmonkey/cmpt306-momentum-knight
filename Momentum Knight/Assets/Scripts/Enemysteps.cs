@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using System;
+
 enum EnemyState
 {
     Idle,
@@ -10,7 +12,6 @@ enum EnemyState
 }
 public class Enemysteps : MonoBehaviour
 {
-    public Transform enemyModel;
     public bool playerIsEnter;
     public float speed;
     public float WaitTime;
@@ -30,14 +31,6 @@ public class Enemysteps : MonoBehaviour
     }
     void Update()
     {
-        if (AIPath.desiredVelocity.x >= 0.01f)
-        {
-            enemyModel.localScale = new Vector3(8, 8, 8);
-        }
-        else if (AIPath.desiredVelocity.x <= 0.01f)
-        {
-            enemyModel.localScale = new Vector3(4, 4, 4);
-        }
         switch (enemyState)
         {
             case EnemyState.Idle:
@@ -64,8 +57,6 @@ public class Enemysteps : MonoBehaviour
         if (Vector3.Distance(transform.position, playerTran.position) < 1.0f)
         {
             AIPath.maxSpeed = 0;
-            //AIDestinationSetter.target = null;
-            WaitTime += Time.deltaTime;
             enemyState = EnemyState.Idle;
         }
 
