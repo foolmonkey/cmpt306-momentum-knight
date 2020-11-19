@@ -153,6 +153,24 @@ Transform:
   m_Father: {fileID: 421728408}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &328595594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 886027416745461499, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
+  m_PrefabInstance: {fileID: 7079345816406719347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &328595600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328595594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f994f34696330d949b33027f9a428103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PM: {fileID: 816746777}
 --- !u!1 &329592718
 GameObject:
   m_ObjectHideFlags: 0
@@ -60456,6 +60474,10 @@ PrefabInstance:
       propertyPath: targets.Array.data[4]
       value: 
       objectReference: {fileID: 994848209}
+    - target: {fileID: 8471445389096157853, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8471445389187483929, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
       propertyPath: TheStarPoint
       value: 
@@ -60499,6 +60521,10 @@ PrefabInstance:
     - target: {fileID: 8471445389325023527, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
       propertyPath: m_Offset.y
       value: -0.09922033
+      objectReference: {fileID: 0}
+    - target: {fileID: 8471445389325023527, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8471445389325023529, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
       propertyPath: targets.Array.data[0]
@@ -60560,6 +60586,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 7959319314160004422}
+    - target: {fileID: 8471445389932508201, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8471445390542435616, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
       propertyPath: m_Offset.y
       value: -0.10099908
@@ -60571,6 +60601,10 @@ PrefabInstance:
     - target: {fileID: 8471445390542435616, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
       propertyPath: m_Offset.x
       value: 0.014985591
+      objectReference: {fileID: 0}
+    - target: {fileID: 8471445390542435616, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8471445390542435617, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
       propertyPath: targets.Array.data[0]
