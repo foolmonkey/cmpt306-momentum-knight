@@ -191,7 +191,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -252,16 +252,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
-  roomPrefab: {fileID: 6394453549047961608, guid: 59430c6386e2a86498d93d527b0f7ade, type: 3}
+  roomPrefab: {fileID: 4602005861133652321, guid: f7a8fa18b7af70b4387c654756ef56d4, type: 3}
   roomNumber: 100
   generatedRooms: 0
   startColor: {r: 0, g: 0, b: 0, a: 0}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   point: {fileID: 1657365198}
-  positionleftX: 6
-  positionleftY: -3
-  positionUpX: 8.5
-  positionUpY: 4.3
+  positionRight: 8
+  positionUp: 4
   roomLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -405,6 +403,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 299144207}
     m_Modifications:
+    - target: {fileID: 1652624133957268907, guid: 8e57a79e018bbb34080126d858241f29, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -8.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1652624133957268907, guid: 8e57a79e018bbb34080126d858241f29, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 184.85
+      objectReference: {fileID: 0}
     - target: {fileID: 3540439695744339002, guid: 8e57a79e018bbb34080126d858241f29, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
