@@ -253,7 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: 0
   roomPrefab: {fileID: 4602005861133652321, guid: f7a8fa18b7af70b4387c654756ef56d4, type: 3}
-  roomNumber: 100
+  roomNumber: 50
   generatedRooms: 0
   startColor: {r: 0, g: 0, b: 0, a: 0}
   endColor: {r: 0, g: 0, b: 0, a: 0}
@@ -374,7 +374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455576570174373480, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
       propertyPath: maxSpeed
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2455576570174373481, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
       propertyPath: m_SortingOrder
@@ -405,7 +405,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1652624133957268907, guid: 8e57a79e018bbb34080126d858241f29, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -8.6
+      value: 40.3
       objectReference: {fileID: 0}
     - target: {fileID: 1652624133957268907, guid: 8e57a79e018bbb34080126d858241f29, type: 3}
       propertyPath: m_AnchoredPosition.y
