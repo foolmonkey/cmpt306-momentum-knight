@@ -24,9 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Frost.unity
     guid: 1b83346ddae5e9d4abf0ee4ccb0fb854
   - enabled: 1
-    path: Assets/Scenes/PCG Demo.unity
-    guid: 85eb71eba1b65de4eb985eb302fe06e7
-  - enabled: 1
     path: Assets/Scenes/EndlessRunnerDemo.unity
     guid: a5a2fb6450ab00b478d9319ba3169e27
+  - enabled: 1
+    path: Assets/Scenes/PCG Demo.unity
+    guid: 85eb71eba1b65de4eb985eb302fe06e7
   m_configObjects: {}
