@@ -17,6 +17,7 @@ public class PlayerManager : MonoBehaviour
 
     public void manaDown(int mana)
     {
+        SoundManagerScript.PlaySound("playerattack");
         currentMana -= mana;
 
         if (currentMana < 0)
@@ -27,6 +28,7 @@ public class PlayerManager : MonoBehaviour
 
     public void healthDown(int health)
     {
+        SoundManagerScript.PlaySound("playerhit");
         currentHealth -= health;
 
         if (currentHealth < 0)
@@ -37,6 +39,7 @@ public class PlayerManager : MonoBehaviour
 
     public bool addCoin()
     {
+        SoundManagerScript.PlaySound("coinpickup");
         currentCoins++;
         return true;
     }
