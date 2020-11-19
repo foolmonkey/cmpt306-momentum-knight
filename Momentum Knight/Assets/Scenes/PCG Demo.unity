@@ -678,6 +678,7 @@ GameObject:
   - component: {fileID: 2041415058}
   - component: {fileID: 2041415057}
   - component: {fileID: 2041415064}
+  - component: {fileID: 2041415061}
   m_Layer: 0
   m_Name: Goldeater
   m_TagString: Goldeater
@@ -796,6 +797,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.0001
+--- !u!114 &2041415061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041415055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3409aaeda08aac44cb3b46e9a2fd5707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitDamage: 10
 --- !u!95 &2041415062
 Animator:
   serializedVersion: 3

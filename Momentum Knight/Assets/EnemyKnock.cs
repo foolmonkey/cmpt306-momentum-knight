@@ -8,10 +8,10 @@ public class EnemyKnock : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         GameObject hit = collision.gameObject;
-        PlayerManager healthDown = hit.GetComponent<PlayerManager>();
-        if (healthDown != null)
+        PlayerManager health = hit.GetComponent<PlayerManager>();
+        if (health != null)
         {
-            healthDown.healthDown(HitDamage);
+            health.healthDown(HitDamage);
         }
         Destroy(this.gameObject);
     }
