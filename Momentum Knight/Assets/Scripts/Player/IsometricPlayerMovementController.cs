@@ -20,6 +20,9 @@ public class IsometricPlayerMovementController : MonoBehaviour
     //Ridgid body for player
     Rigidbody2D rbody;
 
+    //Inputs grabbed in update
+    Vector2 movement;
+
     private void Awake()
     {
         playerManager = (PlayerManager)FindObjectOfType(typeof(PlayerManager));
@@ -32,7 +35,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
     }
 
     public void FixedUpdate()
@@ -50,17 +54,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
         bool wasDown = prevVelocity.y < -0.5;
         bool wasRight = prevVelocity.x > 0.5;
         bool wasLeft = prevVelocity.x < -0.5;
-
-        /*
-        //When the user gains momentum (moves diagonally) we want to increase their speed and keep it there
-        Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
-        rbody.velocity = inputVector;
-
-        //calculate movements
-        movementSpeed = momentum / mass;
-        Vector2 movement = inputVector * movementSpeed;
-        Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
-        */
 
         Vector2 movement = inputVector;
 
