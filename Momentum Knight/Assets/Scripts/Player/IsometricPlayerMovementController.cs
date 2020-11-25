@@ -43,26 +43,23 @@ public class IsometricPlayerMovementController : MonoBehaviour
     {
         //Getting current position and user inputs 
         Vector2 currentPos = rbody.position;
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
         float currSpeedDir = currSpeed * 0.5f;
         Vector3 prevVelocity = rbody.velocity;
         float accelerationAdjusted = acceleration;
-        Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
+
 
         bool wasUp = prevVelocity.y > 0.5;
         bool wasDown = prevVelocity.y < -0.5;
         bool wasRight = prevVelocity.x > 0.5;
         bool wasLeft = prevVelocity.x < -0.5;
 
-        Vector2 movement = inputVector;
 
         if (currSpeed > 2)
         {
             accelerationAdjusted = acceleration / 5f;
         }
 
-        if (inputVector == new Vector2(0, 0))
+        if (movement == new Vector2(0, 0))
         {
             // detects player movement
             playerManager.playerIsMoving = false;
@@ -82,7 +79,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             playerManager.playerIsMoving = true;
 
             //up and to the right
-            if (inputVector == new Vector2(1, 1))
+            if (movement == new Vector2(1, 1))
             {
                 if ((!ice && (rbody.velocity.x < 0)) || (!ice && rbody.velocity.y < 0))
                 {
@@ -103,7 +100,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
                 }
             }
             //move down and to the left
-            else if (inputVector == new Vector2(-1, -1))
+            else if (movement == new Vector2(-1, -1))
             {
                 if ((!ice && (rbody.velocity.x < 0)) || (!ice && rbody.velocity.y < 0))
                 {
@@ -125,7 +122,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             }
 
             //move down and to the right
-            else if (inputVector == new Vector2(1, -1))
+            else if (movement == new Vector2(1, -1))
             {
                 if ((!ice && (rbody.velocity.x < 0)) || (!ice && rbody.velocity.y < 0))
                 {
@@ -147,7 +144,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             }
 
             //move up and to the left
-            else if (inputVector == new Vector2(-1, 1))
+            else if (movement == new Vector2(-1, 1))
             {
                 if ((!ice && (rbody.velocity.x < 0)) || (!ice && rbody.velocity.y < 0))
                 {
@@ -170,7 +167,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             }
 
             //move to the left
-            else if (inputVector == new Vector2(-1, 0))
+            else if (movement == new Vector2(-1, 0))
             {
                 if ((!ice && (rbody.velocity.x < 0)) || (!ice && Math.Abs(rbody.velocity.y) < 0))
                 {
@@ -190,7 +187,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             }
 
             //move up
-            else if (inputVector == new Vector2(0, 1))
+            else if (movement == new Vector2(0, 1))
             {
                 if ((!ice && (rbody.velocity.x < 0)) || (!ice && Math.Abs(rbody.velocity.y) < 0))
                 {
@@ -210,7 +207,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             }
 
             //move right
-            else if (inputVector == new Vector2(1, 0))
+            else if (movement == new Vector2(1, 0))
             {
                 if ((!ice && (rbody.velocity.x < 0)) || (!ice && Math.Abs(rbody.velocity.y) < 0))
                 {
@@ -230,7 +227,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             }
 
             //move down
-            else if (inputVector == new Vector2(0, -1))
+            else if (movement == new Vector2(0, -1))
             {
                 if ((!ice && (rbody.velocity.x < 0)) || (!ice && Math.Abs(rbody.velocity.y) < 0))
                 {
