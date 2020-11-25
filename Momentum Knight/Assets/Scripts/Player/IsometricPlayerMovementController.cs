@@ -261,4 +261,9 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
         isoRenderer.SetDirection(movement);
     }
+
+    public void setPlayerMovement(Boolean isMovingValue)
+    {
+        playerManager.playerIsMoving = isMovingValue;
+    }
 }
