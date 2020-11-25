@@ -4,38 +4,22 @@ using UnityEngine;
 
 public class PlayerHPMP : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int currentHealth;
-
-    public int maxMana = 50;
-    public int currentMana;
+    private PlayerManager playerManager;
 
     public HealthBar healthBar;
     public ManaBar manaBar;
 
-    void useMana(int mana){
-        currentMana -= mana;
-
-        manaBar.setMana(currentMana);
-    }
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        currentHealth = maxHealth;
-        healthBar.setMaxHealth(maxHealth);
-        healthBar.setHealth(maxHealth);
-        
-        currentMana = maxMana;
-        manaBar.setMaxMana(maxMana);
-        manaBar.setMana(maxMana);
+        playerManager = (PlayerManager)FindObjectOfType(typeof(PlayerManager));
+        healthBar.setMaxHealth(playerManager.maxHealth);
+        manaBar.setMaxMana(playerManager.maxMana);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space)){
-                useMana(10);
-        }   
+        manaBar.setMana(playerManager.currentMana);
+        healthBar.setHealth(playerManager.currentHealth);
     }
 }

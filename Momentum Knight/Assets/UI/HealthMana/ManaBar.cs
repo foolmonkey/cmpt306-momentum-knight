@@ -6,13 +6,26 @@ using UnityEngine.UI;
 
 public class ManaBar : MonoBehaviour
 {
- public Slider slider;
-    
-    public void setMana(int mana){
+    private PlayerManager playerManager;
+    public Slider slider;
+    private void Awake()
+    {
+        playerManager = (PlayerManager)FindObjectOfType(typeof(PlayerManager));
+        setMaxMana(playerManager.maxMana);
+    }
+
+    private void Update()
+    {
+        setMana(playerManager.currentMana);
+    }
+
+    public void setMana(int mana)
+    {
         slider.value = mana;
     }
 
-    public void setMaxMana(int mana){
+    public void setMaxMana(int mana)
+    {
         slider.maxValue = mana;
         slider.value = mana;
     }

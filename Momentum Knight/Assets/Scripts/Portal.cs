@@ -5,20 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
-    [SerializeField] 
-    private string levelSceneName;
-
+    private LevelLoader levelLoader;
     void Awake()
     {
-        levelSceneName = "MainMenu";
+        levelLoader = (LevelLoader)GameObject.FindObjectOfType(typeof(LevelLoader));
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            // call loader script
-            Loader.Load(Loader.Scene.Frost);
+            levelLoader.LoadNextLevel();
         }
     }
 }
