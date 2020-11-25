@@ -32,6 +32,11 @@ public class IsometricPlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    public void FixedUpdate()
+    {
         //Getting current position and user inputs 
         Vector2 currentPos = rbody.position;
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -75,7 +80,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
             if (currSpeed > 1)
             {
-                currSpeed -= accelerationAdjusted * 2f;
+                currSpeed -= .2f;
             }
         }
         else
@@ -86,7 +91,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             //up and to the right
             if (inputVector == new Vector2(1, 1))
             {
-                if ((!ice && (rbody.velocity.x < 0)) || rbody.velocity.y < 0)
+                if ((!ice && (rbody.velocity.x < 0)) || (!ice && rbody.velocity.y < 0))
                 {
                     rbody.velocity = new Vector2(0, 0);
                 }
@@ -107,7 +112,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             //move down and to the left
             else if (inputVector == new Vector2(-1, -1))
             {
-                if ((!ice && (rbody.velocity.x > 0)) || rbody.velocity.y > 0)
+                if ((!ice && (rbody.velocity.x < 0)) || (!ice && rbody.velocity.y < 0))
                 {
                     rbody.velocity = new Vector2(0, 0);
                 }
@@ -129,7 +134,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             //move down and to the right
             else if (inputVector == new Vector2(1, -1))
             {
-                if ((!ice && (rbody.velocity.x < 0)) || rbody.velocity.y > 0)
+                if ((!ice && (rbody.velocity.x < 0)) || (!ice && rbody.velocity.y < 0))
                 {
                     rbody.velocity = new Vector2(0, 0);
                 }
@@ -151,7 +156,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             //move up and to the left
             else if (inputVector == new Vector2(-1, 1))
             {
-                if ((!ice && (rbody.velocity.x > 0)) || rbody.velocity.y < 0)
+                if ((!ice && (rbody.velocity.x < 0)) || (!ice && rbody.velocity.y < 0))
                 {
                     rbody.velocity = new Vector2(0, 0);
                 }
@@ -174,7 +179,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             //move to the left
             else if (inputVector == new Vector2(-1, 0))
             {
-                if ((!ice && (rbody.velocity.x > 0)) || Math.Abs(rbody.velocity.y) > 0)
+                if ((!ice && (rbody.velocity.x < 0)) || (!ice && Math.Abs(rbody.velocity.y) < 0))
                 {
                     rbody.velocity = new Vector2(0, 0);
                 }
@@ -194,7 +199,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             //move up
             else if (inputVector == new Vector2(0, 1))
             {
-                if ((!ice && (rbody.velocity.y < 0)) || Math.Abs(rbody.velocity.x) > 0)
+                if ((!ice && (rbody.velocity.x < 0)) || (!ice && Math.Abs(rbody.velocity.y) < 0))
                 {
                     rbody.velocity = new Vector2(0, 0);
                 }
@@ -214,7 +219,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             //move right
             else if (inputVector == new Vector2(1, 0))
             {
-                if ((!ice && rbody.velocity.x < 0) || Math.Abs(rbody.velocity.y) > 0)
+                if ((!ice && (rbody.velocity.x < 0)) || (!ice && Math.Abs(rbody.velocity.y) < 0))
                 {
                     rbody.velocity = new Vector2(0, 0);
                 }
@@ -234,7 +239,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             //move down
             else if (inputVector == new Vector2(0, -1))
             {
-                if ((!ice && (rbody.velocity.y > 0)) || Math.Abs(rbody.velocity.x) > 0)
+                if ((!ice && (rbody.velocity.x < 0)) || (!ice && Math.Abs(rbody.velocity.y) < 0))
                 {
                     rbody.velocity = new Vector2(0, 0);
                 }
