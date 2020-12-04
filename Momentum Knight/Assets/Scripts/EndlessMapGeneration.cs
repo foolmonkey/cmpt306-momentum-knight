@@ -52,7 +52,7 @@ public class EndlessMapGeneration : MonoBehaviour
             prevDirection = 0;
             direction = 0;
 
-            deleteWalls(newRoom);
+            handleCurrentDirection(newRoom);
 
             generatedRooms++;
 
@@ -77,7 +77,7 @@ public class EndlessMapGeneration : MonoBehaviour
                 if (!isCreatingRooms)
                 {
                     isCreatingRooms = true;
-                    int hall = Mathf.RoundToInt(Random.Range(3, 10));
+                    int hall = Mathf.RoundToInt(Random.Range(3, 8));
                     if (hall > roomNumber - generatedRooms)
                     {
                         hall = roomNumber - generatedRooms;
@@ -92,7 +92,7 @@ public class EndlessMapGeneration : MonoBehaviour
                         // delete walls depending on direction
                         if (i < hall)
                         {
-                            deleteWalls(newRoom);
+                            handleCurrentDirection(newRoom);
                         }
 
                         generatedRooms++;
@@ -147,104 +147,129 @@ public class EndlessMapGeneration : MonoBehaviour
         Destroy(newRoom.transform.Find("WCorner").gameObject);
     }
 
-    public void deleteWalls(GameObject newRoom)
+    public void handleUp(GameObject newRoom)
+    {
+        // prev direction was left
+        if (prevDirection == 2)
+        {
+            Destroy(newRoom.transform.Find("NCorner").gameObject);
+            Destroy(newRoom.transform.Find("ECorner").gameObject);
+            Destroy(newRoom.transform.Find("NE").gameObject);
+            Destroy(newRoom.transform.Find("SE").gameObject);
+        }
+        // prev direction was right
+        else if (prevDirection == 3)
+        {
+            Destroy(newRoom.transform.Find("NCorner").gameObject);
+            Destroy(newRoom.transform.Find("ECorner").gameObject);
+            Destroy(newRoom.transform.Find("NE").gameObject);
+            Destroy(newRoom.transform.Find("NW").gameObject);
+        }
+        else
+        {
+            Destroy(newRoom.transform.Find("NE").gameObject);
+            Destroy(newRoom.transform.Find("SW").gameObject);
+            deleteCorners(newRoom);
+        }
+
+    }
+
+    public void handleDown(GameObject newRoom)
+    {
+        // prev direction was left
+        if (prevDirection == 2)
+        {
+            Destroy(newRoom.transform.Find("NCorner").gameObject);
+            Destroy(newRoom.transform.Find("ECorner").gameObject);
+            Destroy(newRoom.transform.Find("SW").gameObject);
+            Destroy(newRoom.transform.Find("NW").gameObject);
+        }
+        // prev direction was right
+        else if (prevDirection == 3)
+        {
+            Destroy(newRoom.transform.Find("NCorner").gameObject);
+            Destroy(newRoom.transform.Find("ECorner").gameObject);
+            Destroy(newRoom.transform.Find("NE").gameObject);
+            Destroy(newRoom.transform.Find("SE").gameObject);
+        }
+        else
+        {
+            Destroy(newRoom.transform.Find("NE").gameObject);
+            Destroy(newRoom.transform.Find("SW").gameObject);
+            deleteCorners(newRoom);
+        }
+    }
+
+    public void handleLeft(GameObject newRoom)
+    {
+        // prev direction was up
+        if (prevDirection == 0)
+        {
+            Destroy(newRoom.transform.Find("NW").gameObject);
+            Destroy(newRoom.transform.Find("SW").gameObject);
+            Destroy(newRoom.transform.Find("SCorner").gameObject);
+            Destroy(newRoom.transform.Find("WCorner").gameObject);
+        }
+        // prev direction was down
+        else if (prevDirection == 1)
+        {
+            Destroy(newRoom.transform.Find("NCorner").gameObject);
+            Destroy(newRoom.transform.Find("ECorner").gameObject);
+            Destroy(newRoom.transform.Find("SE").gameObject);
+            Destroy(newRoom.transform.Find("NE").gameObject);
+        }
+        else
+        {
+            Destroy(newRoom.transform.Find("NW").gameObject);
+            Destroy(newRoom.transform.Find("SE").gameObject);
+            deleteCorners(newRoom);
+        }
+    }
+    public void handleRight(GameObject newRoom)
+    {
+        // prev direction was up
+        if (prevDirection == 0)
+        {
+            Destroy(newRoom.transform.Find("NCorner").gameObject);
+            Destroy(newRoom.transform.Find("WCorner").gameObject);
+            Destroy(newRoom.transform.Find("NE").gameObject);
+            Destroy(newRoom.transform.Find("SW").gameObject);
+        }
+        // prev direction was down
+        else if (prevDirection == 1)
+        {
+            Destroy(newRoom.transform.Find("SCorner").gameObject);
+            Destroy(newRoom.transform.Find("ECorner").gameObject);
+            Destroy(newRoom.transform.Find("SW").gameObject);
+            Destroy(newRoom.transform.Find("NE").gameObject);
+        }
+        else
+        {
+            Destroy(newRoom.transform.Find("NE").gameObject);
+            Destroy(newRoom.transform.Find("SW").gameObject);
+            deleteCorners(newRoom);
+        }
+    }
+    public void handleCurrentDirection(GameObject newRoom)
     {
         switch (direction)
         {
             // up
             case 0:
-                if (prevDirection == 2)
-                {
-                    Destroy(newRoom.transform.Find("NCorner").gameObject);
-                    Destroy(newRoom.transform.Find("ECorner").gameObject);
-                    Destroy(newRoom.transform.Find("NE").gameObject);
-                    Destroy(newRoom.transform.Find("SE").gameObject);
-                }
-                else if (prevDirection == 3)
-                {
-                    Destroy(newRoom.transform.Find("NCorner").gameObject);
-                    Destroy(newRoom.transform.Find("ECorner").gameObject);
-                    Destroy(newRoom.transform.Find("NE").gameObject);
-                    Destroy(newRoom.transform.Find("NW").gameObject);
-                }
-                else
-                {
-                    Destroy(newRoom.transform.Find("NE").gameObject);
-                    Destroy(newRoom.transform.Find("SW").gameObject);
-                    deleteCorners(newRoom);
-                }
-
+                handleUp(newRoom);
                 break;
             // down
             case 1:
-                if (prevDirection == 2)
-                {
-                    Destroy(newRoom.transform.Find("NCorner").gameObject);
-                    Destroy(newRoom.transform.Find("ECorner").gameObject);
-                    Destroy(newRoom.transform.Find("SW").gameObject);
-                    Destroy(newRoom.transform.Find("NW").gameObject);
-                }
-                else if (prevDirection == 3)
-                {
-                    Destroy(newRoom.transform.Find("NCorner").gameObject);
-                    Destroy(newRoom.transform.Find("ECorner").gameObject);
-                    Destroy(newRoom.transform.Find("NE").gameObject);
-                    Destroy(newRoom.transform.Find("SE").gameObject);
-                }
-                else
-                {
-                    Destroy(newRoom.transform.Find("NE").gameObject);
-                    Destroy(newRoom.transform.Find("SW").gameObject);
-                    deleteCorners(newRoom);
-                }
+                handleDown(newRoom);
 
                 break;
             // left
             case 2:
-                if (prevDirection == 0)
-                {
-                    Destroy(newRoom.transform.Find("NW").gameObject);
-                    Destroy(newRoom.transform.Find("SW").gameObject);
-                    Destroy(newRoom.transform.Find("SCorner").gameObject);
-                    Destroy(newRoom.transform.Find("WCorner").gameObject);
-                }
-                else if (prevDirection == 1)
-                {
-                    Destroy(newRoom.transform.Find("NCorner").gameObject);
-                    Destroy(newRoom.transform.Find("ECorner").gameObject);
-                    Destroy(newRoom.transform.Find("SE").gameObject);
-                    Destroy(newRoom.transform.Find("NE").gameObject);
-                }
-                else
-                {
-                    Destroy(newRoom.transform.Find("NW").gameObject);
-                    Destroy(newRoom.transform.Find("SE").gameObject);
-                    deleteCorners(newRoom);
-                }
-
+                handleLeft(newRoom);
                 break;
             // right
             case 3:
-                if (prevDirection == 0)
-                {
-                    Destroy(newRoom.transform.Find("NCorner").gameObject);
-                    Destroy(newRoom.transform.Find("WCorner").gameObject);
-                    Destroy(newRoom.transform.Find("NE").gameObject);
-                    Destroy(newRoom.transform.Find("SW").gameObject);
-                }
-                else if (prevDirection == 1)
-                {
-                    Destroy(newRoom.transform.Find("SCorner").gameObject);
-                    Destroy(newRoom.transform.Find("ECorner").gameObject);
-                    Destroy(newRoom.transform.Find("SW").gameObject);
-                    Destroy(newRoom.transform.Find("NE").gameObject);
-                }
-                else
-                {
-                    Destroy(newRoom.transform.Find("NE").gameObject);
-                    Destroy(newRoom.transform.Find("SW").gameObject);
-                    deleteCorners(newRoom);
-                }
+                handleRight(newRoom);
                 break;
         }
     }
