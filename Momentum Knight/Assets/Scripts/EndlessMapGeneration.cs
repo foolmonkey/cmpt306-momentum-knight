@@ -65,7 +65,7 @@ public class EndlessMapGeneration : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         float distanceFromEarliestRoom = Vector3.Distance(playerTransform.position, ealiestRoom.position);
         float distanceFromLatestRoom = Vector3.Distance(playerTransform.position, latestRoom.position);
@@ -139,6 +139,14 @@ public class EndlessMapGeneration : MonoBehaviour
         }
     }
 
+    public void deleteCorners(GameObject newRoom)
+    {
+        Destroy(newRoom.transform.Find("NCorner").gameObject);
+        Destroy(newRoom.transform.Find("ECorner").gameObject);
+        Destroy(newRoom.transform.Find("SCorner").gameObject);
+        Destroy(newRoom.transform.Find("WCorner").gameObject);
+    }
+
     public void deleteWalls(GameObject newRoom)
     {
         switch (direction)
@@ -147,53 +155,96 @@ public class EndlessMapGeneration : MonoBehaviour
             case 0:
                 if (prevDirection == 2)
                 {
+                    Destroy(newRoom.transform.Find("NCorner").gameObject);
+                    Destroy(newRoom.transform.Find("ECorner").gameObject);
+                    Destroy(newRoom.transform.Find("NE").gameObject);
                     Destroy(newRoom.transform.Find("SE").gameObject);
                 }
                 else if (prevDirection == 3)
                 {
+                    Destroy(newRoom.transform.Find("NCorner").gameObject);
+                    Destroy(newRoom.transform.Find("ECorner").gameObject);
+                    Destroy(newRoom.transform.Find("NE").gameObject);
                     Destroy(newRoom.transform.Find("NW").gameObject);
                 }
-                Destroy(newRoom.transform.Find("NE").gameObject);
-                Destroy(newRoom.transform.Find("SW").gameObject);
+                else
+                {
+                    Destroy(newRoom.transform.Find("NE").gameObject);
+                    Destroy(newRoom.transform.Find("SW").gameObject);
+                    deleteCorners(newRoom);
+                }
+
                 break;
             // down
             case 1:
                 if (prevDirection == 2)
                 {
+                    Destroy(newRoom.transform.Find("NCorner").gameObject);
+                    Destroy(newRoom.transform.Find("ECorner").gameObject);
+                    Destroy(newRoom.transform.Find("SW").gameObject);
                     Destroy(newRoom.transform.Find("NW").gameObject);
                 }
                 else if (prevDirection == 3)
                 {
+                    Destroy(newRoom.transform.Find("NCorner").gameObject);
+                    Destroy(newRoom.transform.Find("ECorner").gameObject);
+                    Destroy(newRoom.transform.Find("NE").gameObject);
                     Destroy(newRoom.transform.Find("SE").gameObject);
                 }
-                Destroy(newRoom.transform.Find("NE").gameObject);
-                Destroy(newRoom.transform.Find("SW").gameObject);
+                else
+                {
+                    Destroy(newRoom.transform.Find("NE").gameObject);
+                    Destroy(newRoom.transform.Find("SW").gameObject);
+                    deleteCorners(newRoom);
+                }
+
                 break;
             // left
             case 2:
                 if (prevDirection == 0)
                 {
+                    Destroy(newRoom.transform.Find("NW").gameObject);
                     Destroy(newRoom.transform.Find("SW").gameObject);
+                    Destroy(newRoom.transform.Find("SCorner").gameObject);
+                    Destroy(newRoom.transform.Find("WCorner").gameObject);
                 }
                 else if (prevDirection == 1)
                 {
+                    Destroy(newRoom.transform.Find("NCorner").gameObject);
+                    Destroy(newRoom.transform.Find("ECorner").gameObject);
+                    Destroy(newRoom.transform.Find("SE").gameObject);
                     Destroy(newRoom.transform.Find("NE").gameObject);
                 }
-                Destroy(newRoom.transform.Find("NW").gameObject);
-                Destroy(newRoom.transform.Find("SE").gameObject);
+                else
+                {
+                    Destroy(newRoom.transform.Find("NW").gameObject);
+                    Destroy(newRoom.transform.Find("SE").gameObject);
+                    deleteCorners(newRoom);
+                }
+
                 break;
             // right
             case 3:
                 if (prevDirection == 0)
                 {
+                    Destroy(newRoom.transform.Find("NCorner").gameObject);
+                    Destroy(newRoom.transform.Find("WCorner").gameObject);
+                    Destroy(newRoom.transform.Find("NE").gameObject);
                     Destroy(newRoom.transform.Find("SW").gameObject);
                 }
                 else if (prevDirection == 1)
                 {
+                    Destroy(newRoom.transform.Find("SCorner").gameObject);
+                    Destroy(newRoom.transform.Find("ECorner").gameObject);
+                    Destroy(newRoom.transform.Find("SW").gameObject);
                     Destroy(newRoom.transform.Find("NE").gameObject);
                 }
-                Destroy(newRoom.transform.Find("NE").gameObject);
-                Destroy(newRoom.transform.Find("SW").gameObject);
+                else
+                {
+                    Destroy(newRoom.transform.Find("NE").gameObject);
+                    Destroy(newRoom.transform.Find("SW").gameObject);
+                    deleteCorners(newRoom);
+                }
                 break;
         }
     }
