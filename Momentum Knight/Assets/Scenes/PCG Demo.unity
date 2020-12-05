@@ -453,14 +453,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
-  roomPrefab: {fileID: 4602005861133652321, guid: f7a8fa18b7af70b4387c654756ef56d4, type: 3}
+  roomPrefab: {fileID: 5575851041370478805, guid: cfbf5c31160782640a1049a9f40b0dde, type: 3}
   roomNumber: 50
   generatedRooms: 0
   startColor: {r: 0, g: 0, b: 0, a: 0}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   point: {fileID: 1657365198}
-  positionRight: 8
-  positionUp: 4
+  positionRight: 6
+  positionUp: 3
   roomLayer:
     serializedVersion: 2
     m_Bits: 512
