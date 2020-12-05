@@ -8961,8 +8961,7 @@ PrefabInstance:
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[31].y
       value: -1.53125
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5571391658917372631, guid: 284c99037cb82454dba235238e0c98dd, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 284c99037cb82454dba235238e0c98dd, type: 3}
 --- !u!1 &430511439 stripped
 GameObject:

@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PCG Demo.unity
     guid: 85eb71eba1b65de4eb985eb302fe06e7
+  - enabled: 1
+    path: Assets/Scenes/PCG 2.unity
+    guid: 3f812b70b139a5e40b25402909cf8c1f
   m_configObjects: {}
