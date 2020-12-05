@@ -99,7 +99,11 @@ public class EndlessMapGeneration : MonoBehaviour
 
                         prevDirection = direction;
                     }
-                    ChangeRandomPos();
+                    if (generatedRooms < roomNumber - 8)
+                    {
+                        ChangeRandomPos();
+
+                    }
 
                     isCreatingRooms = false;
                 }
