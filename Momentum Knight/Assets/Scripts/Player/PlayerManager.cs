@@ -47,6 +47,8 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        LD = (LevelLoader)FindObjectOfType(typeof(LevelLoader));
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
         if (maxHealth == 0)
         {
@@ -60,6 +62,7 @@ public class PlayerManager : MonoBehaviour
         currentHealth = maxHealth;
         currentMana = 0;
         currentCoins = 0;
+
     }
 
     // Update is called once per frame
@@ -83,10 +86,10 @@ public class PlayerManager : MonoBehaviour
             currentMana += 1;
         }
 
-        if(currentHealth == 0)
+        if (currentHealth <= 0)
         {
             Debug.Log("Player Dead");
-            LD.LoadSpecificLevel(0);
+            LD.LoadSpecificLevel(1);
         }
     }
 }
