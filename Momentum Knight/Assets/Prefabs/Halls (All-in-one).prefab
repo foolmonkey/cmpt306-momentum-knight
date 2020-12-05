@@ -8478,7 +8478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7865802600448383549, guid: 1aa43c569ce3ff949ab6f9975bd89493, type: 3}
       propertyPath: m_Name
-      value: SE Coins
+      value: SECoins
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa43c569ce3ff949ab6f9975bd89493, type: 3}
@@ -8557,7 +8557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7865802600448383549, guid: 1aa43c569ce3ff949ab6f9975bd89493, type: 3}
       propertyPath: m_Name
-      value: SW Coins
+      value: SWCoins
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa43c569ce3ff949ab6f9975bd89493, type: 3}
@@ -8636,7 +8636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7865802600448383549, guid: 1aa43c569ce3ff949ab6f9975bd89493, type: 3}
       propertyPath: m_Name
-      value: NW Coins
+      value: NWCoins
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa43c569ce3ff949ab6f9975bd89493, type: 3}
@@ -8711,7 +8711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7865802600448383549, guid: 1aa43c569ce3ff949ab6f9975bd89493, type: 3}
       propertyPath: m_Name
-      value: NE Coins
+      value: NECoins
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aa43c569ce3ff949ab6f9975bd89493, type: 3}

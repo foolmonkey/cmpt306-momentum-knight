@@ -152,6 +152,8 @@ public class EndlessMapGeneration : MonoBehaviour
         // prev direction was left
         if (prevDirection == 2)
         {
+            Destroy(newRoom.transform.Find("NWCoins").gameObject);
+            Destroy(newRoom.transform.Find("SWCoins").gameObject);
             Destroy(newRoom.transform.Find("NCorner").gameObject);
             Destroy(newRoom.transform.Find("ECorner").gameObject);
             Destroy(newRoom.transform.Find("NE").gameObject);
@@ -160,6 +162,8 @@ public class EndlessMapGeneration : MonoBehaviour
         // prev direction was right
         else if (prevDirection == 3)
         {
+            Destroy(newRoom.transform.Find("NWCoins").gameObject);
+            Destroy(newRoom.transform.Find("SECoins").gameObject);
             Destroy(newRoom.transform.Find("NCorner").gameObject);
             Destroy(newRoom.transform.Find("ECorner").gameObject);
             Destroy(newRoom.transform.Find("NE").gameObject);
@@ -167,6 +171,8 @@ public class EndlessMapGeneration : MonoBehaviour
         }
         else
         {
+            Destroy(newRoom.transform.Find("NWCoins").gameObject);
+            Destroy(newRoom.transform.Find("SECoins").gameObject);
             Destroy(newRoom.transform.Find("NE").gameObject);
             Destroy(newRoom.transform.Find("SW").gameObject);
             deleteCorners(newRoom);
@@ -194,6 +200,8 @@ public class EndlessMapGeneration : MonoBehaviour
         }
         else
         {
+            Destroy(newRoom.transform.Find("NWCoins").gameObject);
+            Destroy(newRoom.transform.Find("SECoins").gameObject);
             Destroy(newRoom.transform.Find("NE").gameObject);
             Destroy(newRoom.transform.Find("SW").gameObject);
             deleteCorners(newRoom);
@@ -205,6 +213,8 @@ public class EndlessMapGeneration : MonoBehaviour
         // prev direction was up
         if (prevDirection == 0)
         {
+            Destroy(newRoom.transform.Find("NECoins").gameObject);
+            Destroy(newRoom.transform.Find("SECoins").gameObject);
             Destroy(newRoom.transform.Find("NW").gameObject);
             Destroy(newRoom.transform.Find("SW").gameObject);
             Destroy(newRoom.transform.Find("SCorner").gameObject);
@@ -213,6 +223,8 @@ public class EndlessMapGeneration : MonoBehaviour
         // prev direction was down
         else if (prevDirection == 1)
         {
+            Destroy(newRoom.transform.Find("SWCoins").gameObject);
+            Destroy(newRoom.transform.Find("SECoins").gameObject);
             Destroy(newRoom.transform.Find("NCorner").gameObject);
             Destroy(newRoom.transform.Find("ECorner").gameObject);
             Destroy(newRoom.transform.Find("SE").gameObject);
@@ -220,16 +232,21 @@ public class EndlessMapGeneration : MonoBehaviour
         }
         else
         {
+            Destroy(newRoom.transform.Find("NECoins").gameObject);
+            Destroy(newRoom.transform.Find("SWCoins").gameObject);
             Destroy(newRoom.transform.Find("NW").gameObject);
             Destroy(newRoom.transform.Find("SE").gameObject);
             deleteCorners(newRoom);
         }
     }
+
     public void handleRight(GameObject newRoom)
     {
         // prev direction was up
         if (prevDirection == 0)
         {
+            Destroy(newRoom.transform.Find("NWCoins").gameObject);
+            Destroy(newRoom.transform.Find("NECoins").gameObject);
             Destroy(newRoom.transform.Find("NCorner").gameObject);
             Destroy(newRoom.transform.Find("WCorner").gameObject);
             Destroy(newRoom.transform.Find("NE").gameObject);
@@ -238,6 +255,8 @@ public class EndlessMapGeneration : MonoBehaviour
         // prev direction was down
         else if (prevDirection == 1)
         {
+            Destroy(newRoom.transform.Find("NWCoins").gameObject);
+            Destroy(newRoom.transform.Find("SWCoins").gameObject);
             Destroy(newRoom.transform.Find("SCorner").gameObject);
             Destroy(newRoom.transform.Find("ECorner").gameObject);
             Destroy(newRoom.transform.Find("SW").gameObject);
@@ -245,29 +264,27 @@ public class EndlessMapGeneration : MonoBehaviour
         }
         else
         {
+            Destroy(newRoom.transform.Find("NWCoins").gameObject);
+            Destroy(newRoom.transform.Find("SECoins").gameObject);
             Destroy(newRoom.transform.Find("NE").gameObject);
             Destroy(newRoom.transform.Find("SW").gameObject);
             deleteCorners(newRoom);
         }
     }
+
     public void handleCurrentDirection(GameObject newRoom)
     {
         switch (direction)
         {
-            // up
             case 0:
                 handleUp(newRoom);
                 break;
-            // down
             case 1:
                 handleDown(newRoom);
-
                 break;
-            // left
             case 2:
                 handleLeft(newRoom);
                 break;
-            // right
             case 3:
                 handleRight(newRoom);
                 break;
