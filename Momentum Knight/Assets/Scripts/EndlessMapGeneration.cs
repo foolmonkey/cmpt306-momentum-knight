@@ -11,6 +11,8 @@ public class EndlessMapGeneration : MonoBehaviour
     private bool isCreatingRooms;
     [Header("Room Information")]
     public GameObject roomPrefab;
+
+    public GameObject portalPrefab;
     public int roomNumber;
     public int generatedRooms;
     public Color startColor, endColor;
@@ -36,6 +38,7 @@ public class EndlessMapGeneration : MonoBehaviour
 
     void Start()
     {
+
         // get player
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -95,14 +98,20 @@ public class EndlessMapGeneration : MonoBehaviour
                             handleCurrentDirection(newRoom, direction, prevDirection);
                         }
 
+                        // generate portal on end
+                        if (generatedRooms == (roomNumber - 2))
+                        {
+                            Instantiate(portalPrefab, point.position, Quaternion.identity);
+                        }
+
                         generatedRooms++;
 
                         prevDirection = direction;
                     }
-                    if (generatedRooms < roomNumber - 8)
+
+                    if (generatedRooms < (roomNumber - 8))
                     {
                         ChangeRandomPos();
-
                     }
 
                     isCreatingRooms = false;
@@ -149,6 +158,14 @@ public class EndlessMapGeneration : MonoBehaviour
         Destroy(newRoom.transform.Find("ECorner").gameObject);
         Destroy(newRoom.transform.Find("SCorner").gameObject);
         Destroy(newRoom.transform.Find("WCorner").gameObject);
+    }
+
+    public void deleteCoins(GameObject newRoom)
+    {
+        Destroy(newRoom.transform.Find("NECoins").gameObject);
+        Destroy(newRoom.transform.Find("NWCoins").gameObject);
+        Destroy(newRoom.transform.Find("SWCoins").gameObject);
+        Destroy(newRoom.transform.Find("SECoins").gameObject);
     }
 
     public void handleUp(GameObject newRoom, int aPrevDirection)
@@ -278,20 +295,51 @@ public class EndlessMapGeneration : MonoBehaviour
 
     public void handleCurrentDirection(GameObject newRoom, int aDirection, int aPrevDirection)
     {
-        switch (aDirection)
+        // handle first room
+        if (generatedRooms == 0)
         {
-            case 0:
-                handleUp(newRoom, aPrevDirection);
-                break;
-            case 1:
-                handleDown(newRoom, aPrevDirection);
-                break;
-            case 2:
-                handleLeft(newRoom, aPrevDirection);
-                break;
-            case 3:
-                handleRight(newRoom, aPrevDirection);
-                break;
+            deleteCoins(newRoom);
+            Destroy(newRoom.transform.Find("NE").gameObject);
+        }
+        // handle last room
+        else if (generatedRooms == roomNumber - 1)
+        {
+            deleteCoins(newRoom);
+
+            switch (aDirection)
+            {
+                case 0:
+                    Destroy(newRoom.transform.Find("SW").gameObject);
+                    break;
+                case 1:
+                    Destroy(newRoom.transform.Find("NE").gameObject);
+                    break;
+                case 2:
+                    Destroy(newRoom.transform.Find("SW").gameObject);
+                    break;
+                case 3:
+                    Destroy(newRoom.transform.Find("NW").gameObject);
+                    break;
+            }
+        }
+        else
+        {
+            switch (aDirection)
+            {
+                case 0:
+                    handleUp(newRoom, aPrevDirection);
+                    break;
+                case 1:
+                    handleDown(newRoom, aPrevDirection);
+                    break;
+                case 2:
+                    handleLeft(newRoom, aPrevDirection);
+                    break;
+                case 3:
+                    handleRight(newRoom, aPrevDirection);
+
+                    break;
+            }
         }
     }
 

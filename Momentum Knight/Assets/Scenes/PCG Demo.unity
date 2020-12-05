@@ -454,7 +454,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: 0
   roomPrefab: {fileID: 5575851041370478805, guid: cfbf5c31160782640a1049a9f40b0dde, type: 3}
-  roomNumber: 50
+  portalPrefab: {fileID: 7603300005787011376, guid: 284c99037cb82454dba235238e0c98dd, type: 3}
+  roomNumber: 10
   generatedRooms: 0
   startColor: {r: 0, g: 0, b: 0, a: 0}
   endColor: {r: 0, g: 0, b: 0, a: 0}

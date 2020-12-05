@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7603300005787011378}
   - component: {fileID: 7603300005787011377}
-  - component: {fileID: 5571391658917372631}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -46,18 +45,6 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 3
   m_CellSwizzle: 0
---- !u!114 &5571391658917372631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7603300005787011376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73158c641c0ef274f8e0a0be9a9e0903, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7603300005891846449
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,6 +60,7 @@ GameObject:
   - component: {fileID: 7603300005891846453}
   - component: {fileID: 7603300005891846452}
   - component: {fileID: 7603300005891846451}
+  - component: {fileID: 797312583366371397}
   m_Layer: 8
   m_Name: Collision
   m_TagString: Untagged
@@ -542,6 +530,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bacdf8791d3915479b097da3e973e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &797312583366371397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7603300005891846449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73158c641c0ef274f8e0a0be9a9e0903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7603300006579543658
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,7 +792,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16

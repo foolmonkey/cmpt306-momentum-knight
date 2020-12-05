@@ -1,14 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
     private LevelLoader levelLoader;
-    void Awake()
+    void Start()
     {
-        levelLoader = (LevelLoader)GameObject.FindObjectOfType(typeof(LevelLoader));
+        levelLoader = (LevelLoader)FindObjectOfType(typeof(LevelLoader));
     }
 
     void OnCollisionEnter2D(Collision2D collision)
