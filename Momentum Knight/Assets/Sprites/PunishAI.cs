@@ -13,6 +13,9 @@ public class PunishAI : MonoBehaviour
 {
     public bool playerIsEnter;
     public float speed;
+    public float StartTime;
+    public float Trackingdistance;
+    public float Attackdistance;
     private Transform playerTran;
     private PunishState enemyState;
     private AIPath AIPath;
@@ -49,7 +52,7 @@ public class PunishAI : MonoBehaviour
     }
     public void Idle()
     {
-        if (playerIsEnter && Time.time > 15.0f)
+        if (playerIsEnter && Time.time > StartTime)
         {
             AIPath.maxSpeed = speed;
             enemyState = PunishState.Tracking;
@@ -57,27 +60,27 @@ public class PunishAI : MonoBehaviour
     }
     public void Tracking()
     {
-        if (Vector3.Distance(transform.position, playerTran.position) < 12.0f && Vector3.Distance(transform.position, playerTran.position) > 6.0f)
+        if (Vector3.Distance(transform.position, playerTran.position) < Trackingdistance && Vector3.Distance(transform.position, playerTran.position) > Attackdistance)
         {
             AIPath.maxSpeed = 0;
             enemyState = PunishState.Holding;
         }
-        else if (Vector3.Distance(transform.position, playerTran.position) < 6.0f)
+        else if (Vector3.Distance(transform.position, playerTran.position) < Attackdistance)
         {
-            AIPath.maxSpeed = 20;
+            AIPath.maxSpeed = 2 * speed;
             enemyState = PunishState.Attack;
         }
     }
     public void Holding()
     {
-        if (Vector3.Distance(transform.position, playerTran.position) > 12.0f)
+        if (Vector3.Distance(transform.position, playerTran.position) > Trackingdistance)
         {
             AIPath.maxSpeed = speed;
             enemyState = PunishState.Tracking;
         }
-        else if (Vector3.Distance(transform.position, playerTran.position) < 6.0f)
+        else if (Vector3.Distance(transform.position, playerTran.position) < Attackdistance)
         {
-            AIPath.maxSpeed = 20;
+            AIPath.maxSpeed = 2 * speed;
             enemyState = PunishState.Attack;
         }
 

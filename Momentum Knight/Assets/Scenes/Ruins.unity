@@ -60421,9 +60421,9 @@ GameObject:
   - component: {fileID: 1990631060}
   - component: {fileID: 1990631059}
   - component: {fileID: 1990631058}
+  - component: {fileID: 1990631063}
   - component: {fileID: 1990631062}
   - component: {fileID: 1990631057}
-  - component: {fileID: 1990631063}
   m_Layer: 0
   m_Name: Punishghost
   m_TagString: Enemy
@@ -60459,6 +60459,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIsEnter: 1
   speed: 10
+  StartTime: 15
+  Trackingdistance: 12
+  Attackdistance: 6
 --- !u!95 &1990631058
 Animator:
   serializedVersion: 3
