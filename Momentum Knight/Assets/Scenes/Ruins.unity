@@ -60897,7 +60897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455576570174373480, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
       propertyPath: currSpeed
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2455576570174373480, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
       propertyPath: ice

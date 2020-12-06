@@ -468,7 +468,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1165548440675175318, guid: 7fc7ffbfdebf04b49b97478a776fcb04, type: 3}
   m_PrefabInstance: {fileID: 1198145367}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1681855008}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a7355b2930fb2840a69af32ecdc2986, type: 3}
@@ -485,6 +485,7 @@ GameObject:
   - component: {fileID: 1323432595}
   - component: {fileID: 1323432597}
   - component: {fileID: 1323432596}
+  - component: {fileID: 1323432598}
   m_Layer: 5
   m_Name: ScoreCounter
   m_TagString: Untagged
@@ -610,6 +611,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323432594}
   m_CullTransparentMesh: 1
+--- !u!114 &1323432598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323432594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 793b164df70fafd4d8769bd657cebde9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScoreText: {fileID: 1323432596}
 --- !u!1 &1506660015
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +758,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506660015}
   m_CullTransparentMesh: 1
+--- !u!1 &1681855008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1165548440675175316, guid: 7fc7ffbfdebf04b49b97478a776fcb04, type: 3}
+  m_PrefabInstance: {fileID: 1198145367}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1681855009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681855008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ed9d92e1499444b82fd823160305f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1681855010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681855008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a343ea04fd32694f87f6d03b7952414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerIsMoving: 0
+  currentHealth: 10
+  maxHealth: 0
+  currentMana: 0
+  maxMana: 0
+  currentCoins: 0
+  LD: {fileID: 0}
 --- !u!1 &2010625013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,7 +1056,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1198145368}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-        m_MethodName: LoadNextLevel
+        m_MethodName: LoadSceneAfterScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

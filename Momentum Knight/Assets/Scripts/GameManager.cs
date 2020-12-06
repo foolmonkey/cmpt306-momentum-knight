@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager;
     public static int score;
 
+    public static int prevMapIndex;
 
     void Awake()
     {
@@ -26,5 +27,15 @@ public class GameManager : MonoBehaviour
     public int getScore()
     {
         return score;
+    }
+
+    public void setPrevMapIndex(int newIndex)
+    {
+        prevMapIndex = newIndex;
+    }
+
+    public int getPrevMapIndex()
+    {
+        return prevMapIndex;
     }
 }
