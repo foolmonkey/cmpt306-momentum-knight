@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 
     //Creates static globally accessable variable 
     public static GameManager gameManager;
+    public static int score;
 
 
     void Awake()
@@ -15,5 +16,15 @@ public class GameManager : MonoBehaviour
             gameManager = this;
         else
             Destroy(this);
+    }
+
+    public void setScore(int newScore)
+    {
+        score = newScore;
+    }
+
+    public int getScore()
+    {
+        return score;
     }
 }
