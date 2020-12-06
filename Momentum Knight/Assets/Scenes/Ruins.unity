@@ -60760,6 +60760,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6860725027086051730, guid: b7d5e977beca5464399326aa6a1ef0a0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6860725027086051734, guid: b7d5e977beca5464399326aa6a1ef0a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -60808,7 +60812,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6860725027086051730, guid: b7d5e977beca5464399326aa6a1ef0a0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b7d5e977beca5464399326aa6a1ef0a0, type: 3}
 --- !u!1001 &7079345816406719347
 PrefabInstance:
