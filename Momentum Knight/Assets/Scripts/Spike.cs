@@ -29,7 +29,6 @@ public class Spike : MonoBehaviour
         {
             anim.Play("SpikeAnim", 0, 1.0f);
             elapsedTime = 0;
-            Debug.Log("hi");
             animating = true;
             activated = true;
         }
@@ -40,7 +39,6 @@ public class Spike : MonoBehaviour
             if (elapsedTime > 2f)
             {
                 anim.Play("Static", 0, 1.0f);
-                Debug.Log("static");
                 elapsedTime = 0;
                 activated = false;
                 animating = false;
@@ -50,8 +48,10 @@ public class Spike : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("trigger");
         if (other.gameObject.tag == "Player" && activated)
         {
+            Debug.Log("hit");
             playerManager.healthDown(HitDamage);
         }
 
