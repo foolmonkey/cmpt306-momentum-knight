@@ -92,4 +92,9 @@ public class PlayerManager : MonoBehaviour
             LD.LoadSpecificLevel(1);
         }
     }
+
+    public int getCoins()
+    {
+        return currentCoins;
+    }
 }
