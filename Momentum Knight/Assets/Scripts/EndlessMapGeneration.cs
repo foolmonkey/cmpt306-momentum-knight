@@ -109,7 +109,7 @@ public class EndlessMapGeneration : MonoBehaviour
                         prevDirection = direction;
                     }
 
-                    if (generatedRooms < (roomNumber - 8))
+                    if (generatedRooms < (roomNumber - 9))
                     {
                         ChangeRandomPos();
                     }
@@ -315,7 +315,7 @@ public class EndlessMapGeneration : MonoBehaviour
                     Destroy(newRoom.transform.Find("NE").gameObject);
                     break;
                 case 2:
-                    Destroy(newRoom.transform.Find("SW").gameObject);
+                    Destroy(newRoom.transform.Find("SE").gameObject);
                     break;
                 case 3:
                     Destroy(newRoom.transform.Find("NW").gameObject);
