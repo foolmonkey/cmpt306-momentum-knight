@@ -13,6 +13,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
     public float currSpeed = 1.4f;
     public float acceleration = 0.1f;
     public Boolean ice = false;
+    public float maxVelocity = 4.0f;
 
     //Renderer that will assosicate direction with proper sprite and animation
     IsometricCharacterRenderer isoRenderer;
@@ -71,6 +72,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             if (!ice)
             {
                 rbody.velocity *= 0.75f;
+                
             }
             else
             {
@@ -90,36 +92,37 @@ public class IsometricPlayerMovementController : MonoBehaviour
             if(previousMovement.x != movement.x)
             {
                 previousMovement.x = 0;
-                rbody.velocity = new Vector3(0, previousMovement.y, 0);
+                rbody.velocity = new Vector2(0, previousMovement.y);
             }
 
 
             if (previousMovement.y != movement.y)
             {
                 previousMovement.y = 0;
-                rbody.velocity = new Vector3(previousMovement.x, 0, 0);
+                rbody.velocity = new Vector2(previousMovement.x, 0);
             }
 
-            if (movement.x > 0) {
+            if (movement.x > 0 && Math.Abs(rbody.velocity.x) < maxVelocity) {
                 
                 rbody.AddForce(transform.right * currSpeed);
             }
-            else if (movement.x < 0)
+            else if (movement.x < 0 && Math.Abs(rbody.velocity.x) < maxVelocity)
             {
                 
                 rbody.AddForce(transform.right * -currSpeed);
             }
 
-            if (movement.y > 0)
+            if (movement.y > 0 && Math.Abs(rbody.velocity.y) < maxVelocity)
             {
                 
                 rbody.AddForce(transform.up * currSpeed);
             }
-            else if (movement.y < 0)
+            else if (movement.y < 0 && Math.Abs(rbody.velocity.y) < maxVelocity)
             {
                 
                 rbody.AddForce(transform.up * -currSpeed);
             }
+
 
 
         }
