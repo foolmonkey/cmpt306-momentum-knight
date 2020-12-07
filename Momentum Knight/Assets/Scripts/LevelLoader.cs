@@ -33,6 +33,12 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(gm.getPrevMapIndex() + 1));
     }
 
+    public void LoadSceneAfterGametip()
+    {
+        gm = (GameManager)FindObjectOfType(typeof(GameManager));
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
     public void LoadSpecificLevel(int level)
     {
         playerManager = (PlayerManager)FindObjectOfType(typeof(PlayerManager));
@@ -45,7 +51,7 @@ public class LevelLoader : MonoBehaviour
     public void LoadFirstLevel()
     {
         gm = (GameManager)FindObjectOfType(typeof(GameManager));
-        gm.setPrevMapIndex(3);
+        gm.setPrevMapIndex(4);
         StartCoroutine(LoadLevel(3));
     }
 
