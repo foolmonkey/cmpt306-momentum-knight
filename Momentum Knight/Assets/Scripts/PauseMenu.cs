@@ -35,6 +35,13 @@ public class PauseMenu : MonoBehaviour
         GamePaused = false;
     }
 
+    public void GoToMainMenu()
+    {
+        Resume();
+        LevelLoader levelLoader = (LevelLoader)FindObjectOfType(typeof(LevelLoader));
+        levelLoader.LoadMainMenu();
+    }
+
     public void Pause()
     {
         pauseMenuUI.SetActive(true);
