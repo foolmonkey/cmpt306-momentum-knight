@@ -15,32 +15,38 @@ EditorBuildSettings:
     path: Assets/Scenes/ScoreScreen.unity
     guid: cc8f0f41a68e75f47aff32b325e61aae
   - enabled: 1
-    path: Assets/Scenes/GameTipRuins.unity
+    path: Assets/Scenes/GameTips/GameTipRuins.unity
     guid: 9731eff18dfc3f0408d4cf49ebc45b93
   - enabled: 1
     path: Assets/Scenes/Ruins.unity
     guid: f7c84a32f8df65049ba1193b32929199
   - enabled: 1
+    path: Assets/Scenes/GameTips/FrostGameTip.unity
+    guid: 5026f777315bb0e40b2f7380e95787b0
+  - enabled: 1
     path: Assets/Scenes/Frost.unity
     guid: 1b83346ddae5e9d4abf0ee4ccb0fb854
   - enabled: 1
-    path: Assets/Scenes/GameTip4.unity
-    guid: 40257fb06be664e4db185139a90200d5
+    path: Assets/Scenes/GameTips/EndlessGameTip.unity
+    guid: e58184a2d5dfe1a46be83bc96417cdef
   - enabled: 1
     path: Assets/Scenes/EndlessRunnerDemo.unity
     guid: a5a2fb6450ab00b478d9319ba3169e27
   - enabled: 1
-    path: Assets/Scenes/PCG2GameTip.unity
-    guid: ee0ffffbb415bfc4b985dc79e18ddc6f
+    path: Assets/Scenes/GameTips/PCG1GameTip.unity
+    guid: 40257fb06be664e4db185139a90200d5
   - enabled: 1
     path: Assets/Scenes/PCG Demo.unity
     guid: 85eb71eba1b65de4eb985eb302fe06e7
   - enabled: 1
-    path: Assets/Scenes/PCG3GameTip.unity
-    guid: 15022d68d3734f74e8315b5d3bf20e7c
+    path: Assets/Scenes/GameTips/PCG2GameTip.unity
+    guid: ee0ffffbb415bfc4b985dc79e18ddc6f
   - enabled: 1
     path: Assets/Scenes/PCG 2.unity
     guid: 3f812b70b139a5e40b25402909cf8c1f
+  - enabled: 1
+    path: Assets/Scenes/GameTips/PCG3GameTip.unity
+    guid: 15022d68d3734f74e8315b5d3bf20e7c
   - enabled: 1
     path: Assets/Scenes/PCG 3.unity
     guid: a38c11afbd014b747846d398e7f7653d
