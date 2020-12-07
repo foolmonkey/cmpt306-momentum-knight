@@ -63819,6 +63819,18 @@ PrefabInstance:
       propertyPath: height
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 422292144051427570, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 422292144051427570, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 422292144051427570, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 422292144051427572, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
       propertyPath: Player
       value: 

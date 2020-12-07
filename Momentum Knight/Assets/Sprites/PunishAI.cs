@@ -17,7 +17,7 @@ public class PunishAI : MonoBehaviour
     public float Trackingdistance;
     public float Attackdistance;
     public Transform point;
-    public Transform Player;
+    private Transform Player;
     private PunishState enemyState;
     private AIPath AIPath;
     private AIDestinationSetter AIDestinationSetter;
@@ -28,6 +28,7 @@ public class PunishAI : MonoBehaviour
     {
         AIPath = GetComponent<AIPath>();
         AIDestinationSetter = GetComponent<AIDestinationSetter>();
+        Player = GameObject.FindGameObjectWithTag("Player").transform;
         AIPath.maxSpeed = 0;
         AIPath.maxAcceleration = 0.01f;
         enemyState = PunishState.Idle;

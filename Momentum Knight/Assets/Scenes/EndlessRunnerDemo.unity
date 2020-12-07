@@ -11006,6 +11006,36 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &908356551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 908356552}
+  m_Layer: 0
+  m_Name: Punishpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &908356552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908356551}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.43, y: -1, z: -0.83971953}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &940394164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7650164345334913284, guid: aaf1af29220596943bd072eacd5bc694, type: 3}
@@ -11790,6 +11820,103 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1064808091
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 244840449901151784, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_Name
+      value: Punishghost
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151785, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151785, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151785, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151785, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151785, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151785, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151785, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151785, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151785, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151785, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151785, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151785, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151785, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151785, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151798, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: SafeDistance
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151798, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: Trackingdistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151798, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: Attackdistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151798, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: point
+      value: 
+      objectReference: {fileID: 908356552}
+    - target: {fileID: 244840449901151799, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1272894171}
+    - target: {fileID: 5599272167035693198, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.209
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599272167035693198, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.524
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
 --- !u!1 &1065918083
 GameObject:
   m_ObjectHideFlags: 0
@@ -23231,11 +23358,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4978679594495478546, guid: 6e054194a635a054a9e77df18e5fd738, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.87
+      value: -9.09
       objectReference: {fileID: 0}
     - target: {fileID: 4978679594495478546, guid: 6e054194a635a054a9e77df18e5fd738, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1400001
+      value: -5.62
       objectReference: {fileID: 0}
     - target: {fileID: 4978679594495478546, guid: 6e054194a635a054a9e77df18e5fd738, type: 3}
       propertyPath: m_LocalPosition.z
