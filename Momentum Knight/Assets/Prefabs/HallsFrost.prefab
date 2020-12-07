@@ -3424,7 +3424,7 @@ GameObject:
   - component: {fileID: 8141097720773006665}
   - component: {fileID: 2772591230598785698}
   m_Layer: 0
-  m_Name: Smaller Halls (All-in-one)
+  m_Name: HallsFrost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

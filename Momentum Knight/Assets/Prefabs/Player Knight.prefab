@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7079345817214267525}
   m_Layer: 0
   m_Name: KnightRender
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 5
-  currSpeed: 1
+  currSpeed: 3
   acceleration: 0.3
   ice: 0
 --- !u!114 &4833862512181713455
@@ -329,6 +329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapon
       objectReference: {fileID: 0}
+    - target: {fileID: 6774519772356164407, guid: fd9ea6edf1cfcb44d9d5e76e77a6092b, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6774519773972525549, guid: fd9ea6edf1cfcb44d9d5e76e77a6092b, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
@@ -352,6 +356,10 @@ PrefabInstance:
     - target: {fileID: 6774519773972525550, guid: fd9ea6edf1cfcb44d9d5e76e77a6092b, type: 3}
       propertyPath: m_Name
       value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774519773972525550, guid: fd9ea6edf1cfcb44d9d5e76e77a6092b, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd9ea6edf1cfcb44d9d5e76e77a6092b, type: 3}

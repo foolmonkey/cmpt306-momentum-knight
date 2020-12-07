@@ -46,7 +46,7 @@ public class Enemysteps : MonoBehaviour
     }
     public void Idle()
     {
-        if (playerIsEnter)
+        if (playerIsEnter && Time.time > 7.0f)
         {
             AIPath.maxSpeed = speed;
             enemyState = EnemyState.Tracking;

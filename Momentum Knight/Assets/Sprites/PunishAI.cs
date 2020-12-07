@@ -13,21 +13,24 @@ public class PunishAI : MonoBehaviour
 {
     public bool playerIsEnter;
     public float speed;
-    public float StartTime;
+    public float SafeDistance;
     public float Trackingdistance;
     public float Attackdistance;
-    private Transform playerTran;
+    public Transform point;
+    public Transform Player;
     private PunishState enemyState;
     private AIPath AIPath;
     private AIDestinationSetter AIDestinationSetter;
+
+
 
     void Start()
     {
         AIPath = GetComponent<AIPath>();
         AIDestinationSetter = GetComponent<AIDestinationSetter>();
-        playerTran = GameObject.FindGameObjectWithTag("Player").transform;
-        enemyState = PunishState.Idle;
         AIPath.maxSpeed = 0;
+        AIPath.maxAcceleration = 0.01f;
+        enemyState = PunishState.Idle;
     }
     void Update()
     {
@@ -50,22 +53,24 @@ public class PunishAI : MonoBehaviour
         }
 
     }
+
     public void Idle()
     {
-        if (playerIsEnter && Time.time > StartTime)
+        if (Vector3.Distance(point.position, Player.position) > SafeDistance)
         {
             AIPath.maxSpeed = speed;
+            AIPath.maxAcceleration = 100;
             enemyState = PunishState.Tracking;
         }
     }
     public void Tracking()
     {
-        if (Vector3.Distance(transform.position, playerTran.position) < Trackingdistance && Vector3.Distance(transform.position, playerTran.position) > Attackdistance)
+        if (Vector3.Distance(point.position, Player.position) > SafeDistance && Vector3.Distance(transform.position, Player.position) < Trackingdistance && Vector3.Distance(transform.position, Player.position) > Attackdistance)
         {
             AIPath.maxSpeed = 0;
             enemyState = PunishState.Holding;
         }
-        else if (Vector3.Distance(transform.position, playerTran.position) < Attackdistance)
+        else if (Vector3.Distance(point.position, Player.position) > SafeDistance && Vector3.Distance(transform.position, Player.position) < Attackdistance)
         {
             AIPath.maxSpeed = 2 * speed;
             enemyState = PunishState.Attack;
@@ -73,12 +78,12 @@ public class PunishAI : MonoBehaviour
     }
     public void Holding()
     {
-        if (Vector3.Distance(transform.position, playerTran.position) > Trackingdistance)
+        if (Vector3.Distance(point.position, Player.position) > SafeDistance && Vector3.Distance(transform.position, Player.position) > Trackingdistance)
         {
             AIPath.maxSpeed = speed;
             enemyState = PunishState.Tracking;
         }
-        else if (Vector3.Distance(transform.position, playerTran.position) < Attackdistance)
+        else if (Vector3.Distance(point.position, Player.position) > SafeDistance && Vector3.Distance(transform.position, Player.position) < Attackdistance)
         {
             AIPath.maxSpeed = 2 * speed;
             enemyState = PunishState.Attack;
@@ -87,9 +92,10 @@ public class PunishAI : MonoBehaviour
     }
     public void Attack()
     {
+        if (Vector3.Distance(point.position, Player.position) > SafeDistance && Vector3.Distance(transform.position, Player.position) > Trackingdistance)
         {
-            AIPath.maxSpeed = speed;
+            AIPath.maxSpeed = 0;
+            enemyState = PunishState.Idle;
         }
     }
-
 }
