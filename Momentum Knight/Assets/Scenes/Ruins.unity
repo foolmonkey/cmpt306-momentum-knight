@@ -58324,7 +58324,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1021113764
 GameObject:
@@ -60045,11 +60045,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 422292143726255765, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 37.85
+      value: 34.98
       objectReference: {fileID: 0}
     - target: {fileID: 422292143726255765, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.06
+      value: 53.64
       objectReference: {fileID: 0}
     - target: {fileID: 422292143977204952, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -60127,6 +60127,10 @@ PrefabInstance:
       propertyPath: Trackingdistance
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 422292144051427572, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
+      propertyPath: SafeDistance
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 422292144051427573, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
       propertyPath: target
       value: 
@@ -60141,11 +60145,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 422292144924523745, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40.03
+      value: 41.27
       objectReference: {fileID: 0}
     - target: {fileID: 422292144924523745, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.91
+      value: 43.67
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a78e60a5a59d1d46a369ebca80244bc, type: 3}
