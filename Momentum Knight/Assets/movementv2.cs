@@ -43,5 +43,7 @@ public class movementv2 : MonoBehaviour
     {
         rb.velocity = movementDirection * movementSpeed;
     }
+    
+    void 
 
 }
