@@ -322,7 +322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793b164df70fafd4d8769bd657cebde9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScoreText: {fileID: 603367768}
+  currentScoreText: {fileID: 0}
+  totalScoreText: {fileID: 603367768}
 --- !u!114 &603367768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -798,8 +799,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -111, y: 0.0000038147}
-  m_SizeDelta: {x: 341.9637, y: 87.28035}
+  m_AnchoredPosition: {x: -177, y: 2.9702}
+  m_SizeDelta: {x: 323.9584, y: 87.28035}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1584246500
 MonoBehaviour:
@@ -821,7 +822,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'SCORE:'
+  m_text: 'FINAL SCORE:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0af37230da015b148979d98306db4bde, type: 2}
   m_sharedMaterial: {fileID: -7010837077516866175, guid: 0af37230da015b148979d98306db4bde, type: 2}

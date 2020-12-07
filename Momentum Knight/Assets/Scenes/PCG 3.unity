@@ -349,7 +349,7 @@ MonoBehaviour:
   direction: 0
   roomPrefab: {fileID: 1824387869907131791, guid: f361b58dbe8c44f44bc2b30fce418af0, type: 3}
   portalPrefab: {fileID: 7603300005787011376, guid: 284c99037cb82454dba235238e0c98dd, type: 3}
-  roomNumber: 30
+  roomNumber: 10
   generatedRooms: 0
   startColor: {r: 0, g: 0, b: 0, a: 0}
   endColor: {r: 0, g: 0, b: 0, a: 0}

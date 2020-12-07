@@ -8,9 +8,19 @@ public class ScoreUI : MonoBehaviour
 {
     GameManager gameManager;
     public TextMeshProUGUI currentScoreText;
+    public TextMeshProUGUI totalScoreText;
+
     private void Awake()
     {
         gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
-        currentScoreText.text = gameManager.getScore().ToString();
+        if (currentScoreText)
+        {
+            currentScoreText.text = gameManager.getScore().ToString();
+        }
+
+        if (totalScoreText)
+        {
+            totalScoreText.text = gameManager.getTotalScore().ToString();
+        }
     }
 }

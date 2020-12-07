@@ -624,6 +624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScoreText: {fileID: 1323432596}
+  totalScoreText: {fileID: 0}
 --- !u!1 &1506660015
 GameObject:
   m_ObjectHideFlags: 0

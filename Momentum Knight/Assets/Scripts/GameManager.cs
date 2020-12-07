@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     //Creates static globally accessable variable 
     public static GameManager gameManager;
     public static int score;
+    public static int totalScore;
 
     public static int prevMapIndex;
 
@@ -17,16 +18,28 @@ public class GameManager : MonoBehaviour
             gameManager = this;
         else
             Destroy(this);
+
     }
 
     public void setScore(int newScore)
     {
         score = newScore;
+        totalScore += newScore;
     }
 
     public int getScore()
     {
         return score;
+    }
+
+    public void setTotalScore(int newScore)
+    {
+        totalScore = newScore;
+    }
+
+    public int getTotalScore()
+    {
+        return totalScore;
     }
 
     public void setPrevMapIndex(int newIndex)
