@@ -81,6 +81,10 @@ public class IsometricPlayerMovementController : MonoBehaviour
         {
             // detects player movement
             playerManager.playerIsMoving = true;
+            if(currSpeed < maxSpeed)
+            {
+                currSpeed *= 1.05f;
+            }
 
 
             if(previousMovement.x != movement.x)
