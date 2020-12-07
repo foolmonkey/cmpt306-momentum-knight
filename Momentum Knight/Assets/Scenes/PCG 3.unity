@@ -277,6 +277,10 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2455576570174373480, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
+      propertyPath: maxVelocity
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2455576570174373481, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
       propertyPath: m_SortingOrder
       value: 5
@@ -349,7 +353,7 @@ MonoBehaviour:
   direction: 0
   roomPrefab: {fileID: 1824387869907131791, guid: f361b58dbe8c44f44bc2b30fce418af0, type: 3}
   portalPrefab: {fileID: 7603300005787011376, guid: 284c99037cb82454dba235238e0c98dd, type: 3}
-  roomNumber: 10
+  roomNumber: 40
   generatedRooms: 0
   startColor: {r: 0, g: 0, b: 0, a: 0}
   endColor: {r: 0, g: 0, b: 0, a: 0}
