@@ -37,15 +37,11 @@ public class IsometricPlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         previousMovement = movement;
 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-    }
 
-    public void FixedUpdate()
-    {
         //Getting current position and user inputs 
         Vector2 currentPos = rbody.position;
         float currSpeedDir = currSpeed * 0.5f;
@@ -104,28 +100,21 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
             if (movement.x > 0 && Math.Abs(rbody.velocity.x) < maxVelocity)
             {
-
                 rbody.AddForce(transform.right * currSpeed);
             }
             else if (movement.x < 0 && Math.Abs(rbody.velocity.x) < maxVelocity)
             {
-
                 rbody.AddForce(transform.right * -currSpeed);
             }
 
             if (movement.y > 0 && Math.Abs(rbody.velocity.y) < (maxVelocity * 0.5f))
             {
-
                 rbody.AddForce(transform.up * (currSpeed * 0.5f));
             }
             else if (movement.y < 0 && Math.Abs(rbody.velocity.y) < (maxVelocity * 0.5f))
             {
-
                 rbody.AddForce(transform.up * (-currSpeed * 0.5f));
             }
-
-
-
         }
 
         isoRenderer.SetDirection(movement);

@@ -64550,6 +64550,10 @@ PrefabInstance:
       propertyPath: LD
       value: 
       objectReference: {fileID: 557934581}
+    - target: {fileID: 4833862512181713455, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
+      propertyPath: currentMana
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
 --- !u!1001 &7865802599359183731
