@@ -1053,6 +1053,10 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2455576570174373480, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
+      propertyPath: maxVelocity
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2455576570174373481, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
       propertyPath: m_SortingOrder
       value: 5

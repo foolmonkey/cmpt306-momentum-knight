@@ -7,53 +7,81 @@ public class Spike : MonoBehaviour
     public Animator anim;
     private bool activated;
     private float elapsedTime;
+    private float hitTime;
     private bool animating;
     public int HitDamage = 10;
     public PlayerManager playerManager;
 
+    public bool alwaysActivated;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (!alwaysActivated)
+        {
+            alwaysActivated = false;
+        }
         animating = false;
         activated = false;
         playerManager = (PlayerManager)FindObjectOfType(typeof(PlayerManager));
+        hitTime = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        elapsedTime += Time.deltaTime;
-
-        // spike activated
-        if (elapsedTime - 2 > 1 && !animating)
+        if (!alwaysActivated)
         {
-            anim.Play("SpikeAnim", 0, 1.0f);
-            elapsedTime = 0;
-            animating = true;
-            activated = true;
-        }
+            elapsedTime += Time.deltaTime;
 
-        if (animating && elapsedTime > 0.3f)
+            // spike activated
+            if (elapsedTime - 2 > 1 && !animating)
+            {
+                anim.Play("SpikeAnim", 0, 1.0f);
+                elapsedTime = 0;
+                animating = true;
+                activated = true;
+            }
+
+            if (animating && elapsedTime > 0.3f)
+            {
+                anim.Play("Full", 0, 1.0f);
+                if (elapsedTime > 2f)
+                {
+                    anim.Play("Static", 0, 1.0f);
+                    elapsedTime = 0;
+                    activated = false;
+                    animating = false;
+                }
+            }
+        }
+        else
         {
             anim.Play("Full", 0, 1.0f);
-            if (elapsedTime > 2f)
+            activated = true;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+
+        if (hitTime == 0 && other.gameObject.tag == "Player" && activated)
+        {
+            hitTime += 0.01f;
+            playerManager.healthDown(HitDamage);
+        }
+        else
+        {
+            hitTime += Time.deltaTime;
+            if (hitTime > 0.5f)
             {
-                anim.Play("Static", 0, 1.0f);
-                elapsedTime = 0;
-                activated = false;
-                animating = false;
+                hitTime = 0;
             }
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("trigger");
-        if (other.gameObject.tag == "Player" && activated)
-        {
-            Debug.Log("hit");
-            playerManager.healthDown(HitDamage);
-        }
-
+        hitTime = 0;
     }
 }
