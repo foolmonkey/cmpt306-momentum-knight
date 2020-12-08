@@ -72,7 +72,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             if (!ice)
             {
                 rbody.velocity *= 0.75f;
-                
+
             }
             else
             {
@@ -83,13 +83,13 @@ public class IsometricPlayerMovementController : MonoBehaviour
         {
             // detects player movement
             playerManager.playerIsMoving = true;
-            if(currSpeed < maxSpeed)
+            if (currSpeed < maxSpeed)
             {
                 currSpeed *= 1.05f;
             }
 
 
-            if(previousMovement.x != movement.x)
+            if (previousMovement.x != movement.x)
             {
                 previousMovement.x = 0;
                 rbody.velocity = new Vector2(0, previousMovement.y);
@@ -102,25 +102,26 @@ public class IsometricPlayerMovementController : MonoBehaviour
                 rbody.velocity = new Vector2(previousMovement.x, 0);
             }
 
-            if (movement.x > 0 && Math.Abs(rbody.velocity.x) < maxVelocity) {
-                
+            if (movement.x > 0 && Math.Abs(rbody.velocity.x) < maxVelocity)
+            {
+
                 rbody.AddForce(transform.right * currSpeed);
             }
             else if (movement.x < 0 && Math.Abs(rbody.velocity.x) < maxVelocity)
             {
-                
+
                 rbody.AddForce(transform.right * -currSpeed);
             }
 
-            if (movement.y > 0 && Math.Abs(rbody.velocity.y) < maxVelocity)
+            if (movement.y > 0 && Math.Abs(rbody.velocity.y) < (maxVelocity * 0.5f))
             {
-                
-                rbody.AddForce(transform.up * currSpeed);
+
+                rbody.AddForce(transform.up * (currSpeed * 0.5f));
             }
-            else if (movement.y < 0 && Math.Abs(rbody.velocity.y) < maxVelocity)
+            else if (movement.y < 0 && Math.Abs(rbody.velocity.y) < (maxVelocity * 0.5f))
             {
-                
-                rbody.AddForce(transform.up * -currSpeed);
+
+                rbody.AddForce(transform.up * (-currSpeed * 0.5f));
             }
 
 
