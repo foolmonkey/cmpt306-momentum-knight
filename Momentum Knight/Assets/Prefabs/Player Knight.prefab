@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 2455576570174373481}
   - component: {fileID: 2455576570174373480}
   - component: {fileID: 4833862512181713455}
+  - component: {fileID: 3464313182199480668}
   - component: {fileID: 1479716930594624091}
   - component: {fileID: 4994705333988036273}
   - component: {fileID: 7114908080436790378}
@@ -220,6 +221,20 @@ MonoBehaviour:
   maxMana: 80
   currentCoins: 0
   LD: {fileID: 0}
+--- !u!114 &3464313182199480668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886027417401447984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0433761e7acbe064da8c706e3fa2dce2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 100
+  manaCost: 40
 --- !u!114 &1479716930594624091
 MonoBehaviour:
   m_ObjectHideFlags: 0
