@@ -10,6 +10,7 @@ TagManager:
   - Goldeater
   - Roadblock
   - Ghost
+  - Greedy
   layers:
   - Default
   - TransparentFX

@@ -31,5 +31,9 @@ public class DamagePlayer : MonoBehaviour
         {
             PM.healthDown(5);
         }
+        else if (collision.gameObject.tag == "Greedy")
+        {
+            PM.healthDown(33);
+        }
     }
 }

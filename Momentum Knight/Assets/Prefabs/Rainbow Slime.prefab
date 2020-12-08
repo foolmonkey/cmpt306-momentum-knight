@@ -16,7 +16,8 @@ GameObject:
   - component: {fileID: 585010679519299326}
   - component: {fileID: 585010679519299327}
   - component: {fileID: 585010679519299313}
-  m_Layer: 0
+  - component: {fileID: 5716523052722928130}
+  m_Layer: 10
   m_Name: Slime1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -214,9 +215,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIsEnter: 1
-  Attackspeed: 1
+  Attackspeed: 2
   Trackingspeed: 15
-  Trackingdistance: 6
+  Trackingdistance: 4
+--- !u!114 &5716523052722928130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585010679519299312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bef113a2cb1c2d40858a045fe192b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 300
 --- !u!1 &1022195573681063821
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +282,8 @@ GameObject:
   - component: {fileID: 2319102593537444761}
   - component: {fileID: 2319102593537444760}
   - component: {fileID: 2319102593537444763}
-  m_Layer: 0
+  - component: {fileID: 7582810298616477062}
+  m_Layer: 10
   m_Name: Slime3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -466,9 +481,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIsEnter: 1
-  Attackspeed: 1.2
+  Attackspeed: 2.2
   Trackingspeed: 13
   Trackingdistance: 5
+--- !u!114 &7582810298616477062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2319102593537444765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bef113a2cb1c2d40858a045fe192b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 500
 --- !u!1 &2319102593920228525
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +513,8 @@ GameObject:
   - component: {fileID: 2319102593920228521}
   - component: {fileID: 2319102593920228520}
   - component: {fileID: 2319102593920228523}
-  m_Layer: 0
+  - component: {fileID: 3307315608902176974}
+  m_Layer: 10
   m_Name: Slime4
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -683,9 +712,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIsEnter: 1
-  Attackspeed: 1.3
+  Attackspeed: 2.3
   Trackingspeed: 12
   Trackingdistance: 4.5
+--- !u!114 &3307315608902176974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2319102593920228525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bef113a2cb1c2d40858a045fe192b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 600
 --- !u!1 &2319102593974519713
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,7 +744,8 @@ GameObject:
   - component: {fileID: 2319102593974517853}
   - component: {fileID: 2319102593974517852}
   - component: {fileID: 2319102593974517855}
-  m_Layer: 0
+  - component: {fileID: 2617971761261613230}
+  m_Layer: 10
   m_Name: Slime5
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -900,9 +943,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIsEnter: 1
-  Attackspeed: 1.4
+  Attackspeed: 2.3
   Trackingspeed: 11
   Trackingdistance: 4
+--- !u!114 &2617971761261613230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2319102593974519713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bef113a2cb1c2d40858a045fe192b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 700
 --- !u!1 &2319102594695646000
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,7 +975,8 @@ GameObject:
   - component: {fileID: 2319102594695645996}
   - component: {fileID: 2319102594695645999}
   - component: {fileID: 2319102594695645998}
-  m_Layer: 0
+  - component: {fileID: 4272512617181555134}
+  m_Layer: 10
   m_Name: Slime2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1117,6 +1174,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIsEnter: 1
-  Attackspeed: 1.1
+  Attackspeed: 2.1
   Trackingspeed: 15
   Trackingdistance: 5.5
+--- !u!114 &4272512617181555134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2319102594695646000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bef113a2cb1c2d40858a045fe192b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 400

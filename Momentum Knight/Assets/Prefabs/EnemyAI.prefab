@@ -1257,6 +1257,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Punishghost
       objectReference: {fileID: 0}
+    - target: {fileID: 244840449901151784, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
+      propertyPath: m_TagString
+      value: Greedy
+      objectReference: {fileID: 0}
     - target: {fileID: 244840449901151785, guid: 86d541932cd9c124b845b2cfd7e86347, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.896
