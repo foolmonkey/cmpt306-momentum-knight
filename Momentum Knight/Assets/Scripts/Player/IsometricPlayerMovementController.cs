@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class IsometricPlayerMovementController : MonoBehaviour
 {
@@ -124,10 +125,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
                 rbody.AddForce(transform.up * (-currSpeed * 0.5f));
             }
 
-
-
         }
-
         isoRenderer.SetDirection(movement);
     }
 
@@ -135,4 +133,5 @@ public class IsometricPlayerMovementController : MonoBehaviour
     {
         playerManager.playerIsMoving = isMovingValue;
     }
+    
 }
