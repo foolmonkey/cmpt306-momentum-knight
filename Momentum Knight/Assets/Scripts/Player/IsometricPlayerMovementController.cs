@@ -133,5 +133,5 @@ public class IsometricPlayerMovementController : MonoBehaviour
     {
         playerManager.playerIsMoving = isMovingValue;
     }
-    
+
 }

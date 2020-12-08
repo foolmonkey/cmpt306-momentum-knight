@@ -64474,6 +64474,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 194564305875197017, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194564305875197017, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 886027416745461498, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -64536,7 +64544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455576570174373480, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
       propertyPath: acceleration
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2455576570174373480, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
       propertyPath: currSpeed
@@ -64554,7 +64562,8 @@ PrefabInstance:
       propertyPath: currentMana
       value: 80
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4994705333988036273, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
 --- !u!1001 &7865802599359183731
 PrefabInstance:
