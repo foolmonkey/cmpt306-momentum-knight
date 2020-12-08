@@ -200,7 +200,7 @@ MonoBehaviour:
   currSpeed: 3
   acceleration: 0.3
   ice: 0
-  maxVelocity: 4
+  maxVelocity: 6
 --- !u!114 &4833862512181713455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,7 +304,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &5996300868830585231
 Animator:
   serializedVersion: 3

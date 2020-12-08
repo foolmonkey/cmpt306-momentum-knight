@@ -51,7 +51,7 @@ public class LevelLoader : MonoBehaviour
     public void LoadFirstLevel()
     {
         gm = (GameManager)FindObjectOfType(typeof(GameManager));
-        gm.setPrevMapIndex(4);
+        gm.setPrevMapIndex(5);
         StartCoroutine(LoadLevel(3));
     }
 
