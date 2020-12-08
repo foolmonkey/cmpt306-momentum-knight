@@ -75,7 +75,7 @@ public class PlayerManager : MonoBehaviour
         if (currentMana < maxMana && manaTimer >= manaRegen)
         {
             manaTimer = manaTimer - manaRegen;
-            currentMana += 1;
+            currentMana += 2;
         }
 
         if (currentHealth <= 0)
