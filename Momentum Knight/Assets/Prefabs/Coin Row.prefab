@@ -167,5 +167,5 @@ MonoBehaviour:
   playerManager: {fileID: 0}
   target: {fileID: 0}
   isFollow: 0
-  followDistance: 1.3
+  followDistance: 0.8
   speedToFollow: 2.5

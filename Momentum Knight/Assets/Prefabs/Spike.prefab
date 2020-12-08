@@ -99,8 +99,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 948566113258285660}
+  activationDuration: 2
   HitDamage: 10
   playerManager: {fileID: 0}
+  alwaysActivated: 0
 --- !u!68 &1216788015377639777
 EdgeCollider2D:
   m_ObjectHideFlags: 0
