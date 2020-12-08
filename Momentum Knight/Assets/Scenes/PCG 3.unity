@@ -321,35 +321,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponTransform: {fileID: 559450621}
   playerCurrentPosition: {fileID: 559450620}
---- !u!1 &559450625 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 886027416745461499, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
-  m_PrefabInstance: {fileID: 559450619}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &559450626 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4833862512181713455, guid: ef816c699609dec42b6e46c5cdc2543c, type: 3}
-  m_PrefabInstance: {fileID: 559450619}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a343ea04fd32694f87f6d03b7952414, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &559450627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559450625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f994f34696330d949b33027f9a428103, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PM: {fileID: 559450626}
 --- !u!1 &737496276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,10 +1207,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 585010679519299320, guid: 7da3aba63e6f6914bbaef52f5023dfa8, type: 3}
-    - {fileID: 2319102594695645992, guid: 7da3aba63e6f6914bbaef52f5023dfa8, type: 3}
-    - {fileID: 2319102593537444757, guid: 7da3aba63e6f6914bbaef52f5023dfa8, type: 3}
-    - {fileID: 2319102593920228517, guid: 7da3aba63e6f6914bbaef52f5023dfa8, type: 3}
-    - {fileID: 2319102593974517849, guid: 7da3aba63e6f6914bbaef52f5023dfa8, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7da3aba63e6f6914bbaef52f5023dfa8, type: 3}

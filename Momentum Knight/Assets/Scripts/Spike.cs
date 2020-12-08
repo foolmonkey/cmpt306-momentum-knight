@@ -7,8 +7,6 @@ public class Spike : MonoBehaviour
     public Animator anim;
     private bool activated;
     private float elapsedTime;
-
-    public float activationDuration;
     private float hitTime;
     private bool animating;
     public int HitDamage = 10;
@@ -22,10 +20,6 @@ public class Spike : MonoBehaviour
         if (!alwaysActivated)
         {
             alwaysActivated = false;
-        }
-        if (activationDuration == 0f)
-        {
-            activationDuration = 2f;
         }
         animating = false;
         activated = false;
@@ -41,7 +35,7 @@ public class Spike : MonoBehaviour
             elapsedTime += Time.deltaTime;
 
             // spike activated
-            if (elapsedTime - activationDuration > 1 && !animating)
+            if (elapsedTime - 2 > 1 && !animating)
             {
                 anim.Play("SpikeAnim", 0, 1.0f);
                 elapsedTime = 0;
@@ -52,7 +46,7 @@ public class Spike : MonoBehaviour
             if (animating && elapsedTime > 0.3f)
             {
                 anim.Play("Full", 0, 1.0f);
-                if (elapsedTime > activationDuration)
+                if (elapsedTime > 2f)
                 {
                     anim.Play("Static", 0, 1.0f);
                     elapsedTime = 0;

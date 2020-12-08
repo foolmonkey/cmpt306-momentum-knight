@@ -19,6 +19,7 @@ public class WeaponAnimationController : MonoBehaviour
     {
         if (Input.GetKeyDown("space") && playerManager.currentMana > 20)
         {
+            playerManager.manaDown(20);
             anim.Play("Swing", -1, 0f);
         }
     }

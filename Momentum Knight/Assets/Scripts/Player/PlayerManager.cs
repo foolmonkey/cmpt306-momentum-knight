@@ -68,6 +68,14 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (currentMana >= 20)
+            {
+                manaDown(20);
+            }
+        }
+
         if (currentMana < maxMana && playerIsMoving)
         {
             manaTimer += Time.deltaTime;
@@ -80,6 +88,7 @@ public class PlayerManager : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            Debug.Log("Player Dead");
             LD.LoadSpecificLevel(1);
         }
     }
