@@ -1,21 +1,9 @@
-A Group 3 project for CMPT 306
-
------
-
 MOMENTUM KNIGHT
 
-A 2D roguelike-hybrid game based on momentum.
+A casual 2D isometric game based on momentum.
+A Group 3 project for CMPT 306!
 
----------
+Preview
+----------------
 
-RESOURCES
----------------
-
-GAME ASSET SOURCES
------
-
-https://opengameart.org/
-
-https://kenney.itch.io/kenney-donation
-
-https://assetstore.unity.com/2d
+![](0.jpg)
