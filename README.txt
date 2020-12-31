@@ -6,4 +6,6 @@ A Group 3 project for CMPT 306!
 Preview
 ----------------
 
-![](0.png)
+![](./screenshots/0.PNG)
+![](./screenshots/1.PNG)
+![](./screenshots/2.PNG)
