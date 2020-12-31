@@ -6,6 +6,6 @@ A Group 3 project for CMPT 306!
 Preview
 ----------------
 
-![](https://github.com/foolmonkey/cmpt306-momentum-knight/blob/main/screenshots/0.PNG?raw=true)
-![](./screenshots/1.PNG)
-![](./screenshots/2.PNG)
+![0](https://github.com/foolmonkey/cmpt306-momentum-knight/blob/main/screenshots/0.PNG?raw=true)
+![1](https://github.com/foolmonkey/cmpt306-momentum-knight/blob/main/screenshots/1.PNG?raw=true)
+![2](https://github.com/foolmonkey/cmpt306-momentum-knight/blob/main/screenshots/2.PNG?raw=true)
